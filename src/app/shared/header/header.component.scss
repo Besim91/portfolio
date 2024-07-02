@@ -1,46 +1,70 @@
 header {
-    width: 100%;
-    background-color: rgb(20, 29, 47);
-    height: 100px;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  background-color: rgb(20, 29, 47);
+  height: 100px;
+  display: flex;
+  justify-content: center;
 
-div{
+  .burgerMenu {
+    width: 27px;
+    height: 27px;
+    display: none;
+    cursor: pointer;
+  }
+
+  div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .name {
+      cursor: pointer;
+      span {
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+
+        &:nth-child(3) {
+          color: rgb(0, 190, 232);
+        }
+        &:nth-child(2) {
+          color: rgb(75, 71, 255);
+        }
+      }
+    }
+
+    > nav {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      font-size: 20px;
+      > a {
+        text-decoration: none;
+        color: white;
         cursor: pointer;
-        span {
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
 
-            &:nth-child(3) {
-                color: rgb(0, 190, 232); // Änderung der Farbe des dritten Span-Elements
-            }
-            &:nth-child(2) {
-                color: rgb(75, 71, 255); // Änderung der Farbe des zweiten Span-Elements
-            }
+        &:hover {
+          color: rgb(0, 190, 232);
+          transition: color 100ms linear;
         }
+      }
     }
-
-    >nav {
-        display: flex;
-        flex-direction: row;
-        gap: 24px;
-        font-size: 20px;
-        >a {
-            text-decoration: none;
-            color: white;
-            cursor: pointer;
-            
-            &:hover{
-                color: rgb(0, 190, 232);
-                transition: color 100ms linear;
-            }
-        }
-    }
+  }
 }
+
+
+
+@media (max-width: 650px) {
+  .links {
+    display: none !important;
+  }
+
+  .burgerMenu {
+    display: block !important;
+  }
+
+  .maxWidth {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }

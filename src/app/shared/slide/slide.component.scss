@@ -1,0 +1,76 @@
+.sidebar {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transform: translateX(100%);
+}
+
+.sidebar.active {
+  transform: translateX(0);
+  transition: all 125ms ease-in-out;
+}
+
+header {
+  width: 100%;
+  background-color: transparent;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  font-size: 20px;
+  > a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(0, 190, 232);
+      transition: color 100ms linear;
+    }
+  }
+}
+
+.links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  cursor: pointer;
+  span {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+
+    &:nth-child(3) {
+      color: rgb(0, 190, 232);
+    }
+    &:nth-child(2) {
+      color: rgb(75, 71, 255);
+    }
+  }
+}
+
+.maxWidth {
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burgerMenu {
+  z-index: 999 !important;
+  cursor: pointer;
+}

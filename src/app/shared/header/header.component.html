@@ -7,12 +7,12 @@
             <span>i</span>
             <span>m</span>
         </a>
-
-        <nav>
+        <img *ngIf="this.controll.isBurgerMenuVisible" (click)="toggleSidebar()" id="burgerMenu" class="burgerMenu"
+             src="./../../../assets/img/forms/burger menu.png" alt="burgerMenu">
+        <nav class="links">
             <a href="">About me</a>
             <a href="">Skills</a>
             <a href="">Portfolio</a>
         </nav>
     </div>
-
 </header>

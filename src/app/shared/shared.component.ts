@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './shared.component.html',
-  styleUrl: './shared.component.scss'
+  styleUrl: './shared.component.scss',
 })
-export class SharedComponent {
-
-}
+export class SharedComponent {}

@@ -4,6 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { SlideComponent } from './shared/slide/slide.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +13,11 @@ import { MainContentComponent } from './main-content/main-content.component';
   imports: [
     CommonModule,
     RouterOutlet,
-    HeaderComponent,
     FooterComponent,
     MainContentComponent,
+    SlideComponent,
+    FormsModule,
+    HeaderComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ControllService } from './../../controll.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+  styleUrls: ['./header.component.scss'],
+  imports: [CommonModule],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  controll = inject(ControllService);
+
+  constructor() {}
+
+  toggleSidebar() {
+    this.controll.toggleSidebar();
+  }
+}
