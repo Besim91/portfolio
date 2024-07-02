@@ -3,6 +3,7 @@ section {
   height: 100vh;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 #container {
@@ -15,21 +16,30 @@ section {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 300px;
+  top: 500px;
   z-index: 3;
   width: 100%;
+}
+
+.parentTextContainer {
+  text-align: center;
+  z-index: 4;
+  padding-right: 100px;
 }
 
 .photoParentDiv {
   flex: 1;
   position: relative;
   z-index: 2;
+  padding-top: 0;
 }
 
 .photoLandingpage {
-  width: 100%;
+  width: 500px;
   z-index: 2;
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .backgroundForm {
@@ -37,8 +47,7 @@ section {
   left: 50%;
   transform: translate(-50%);
   z-index: 1;
-  padding-top: 50px;
-  width: 200%;
+  width: 1000px;
 }
 
 .textContainer {
@@ -60,8 +69,8 @@ section {
   transform-origin: left top;
   position: relative;
   height: 100px;
-  top: 172px;
-  font-size: 60px;
+  top: 152px;
+  font-size: 54px;
   white-space: nowrap;
   color: white;
   margin-right: -40px;
@@ -69,14 +78,14 @@ section {
 
 .bm {
   color: white;
-  font-size: 90px;
+  font-size: 80px;
   font-weight: bold;
   white-space: nowrap;
 }
 
 .fd {
   color: rgb(75, 71, 255);
-  font-size: 62px;
+  font-size: 54px;
   white-space: nowrap;
   margin-top: -30px;
   padding-bottom: 30px;
@@ -108,12 +117,6 @@ button {
 
 // ----------------------------------------------------- Responsive
 
-@media (max-width: 1400px) {
-  .form {
-    top: 260px !important;
-  }
-}
-
 @media (max-width: 1300px) {
   #container {
     flex-direction: column;
@@ -124,7 +127,7 @@ button {
   .textContainer {
     justify-content: center;
     width: 100%;
-    padding-top: 20px !important;
+    padding-top: 30px !important;
   }
 
   .photoParentDiv {
@@ -132,8 +135,16 @@ button {
     flex: unset !important;
   }
 
-  .form {
-    top: 280px !important;
+  .photoLandingpage {
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .backgroundForm {
+    width: 200%;
+  }
+  .parentTextContainer {
+    padding-right: 0;
   }
 }
 
@@ -150,10 +161,6 @@ button {
     top: 154px !important;
     font-size: 54px !important;
   }
-
-  .form {
-    top: 290px !important;
-  }
 }
 
 @media (max-width: 1100px) {
@@ -168,10 +175,6 @@ button {
   .iAm {
     top: 142px !important;
     font-size: 50px !important;
-  }
-
-  .form {
-    top: 310px !important;
   }
 }
 
@@ -188,22 +191,12 @@ button {
     top: 130px !important;
     font-size: 46px !important;
   }
-
-  .form {
-    top: 340px !important;
-  }
 }
 
 @media (max-width: 900px) {
-  .form {
-    top: 370px !important;
-  }
 }
 
 @media (max-width: 800px) {
-  .form {
-    top: 400px !important;
-  }
 }
 
 @media (max-width: 700px) {
@@ -222,10 +215,6 @@ button {
 
   #textBox {
     gap: 5px !important;
-  }
-
-  .form {
-    top: 430px !important;
   }
 }
 
@@ -254,10 +243,6 @@ button {
   #textBox {
     gap: 8px !important;
   }
-
-  .form {
-    top: 390px !important;
-  }
 }
 
 @media (max-width: 550px) {
@@ -281,10 +266,6 @@ button {
   .textContainer {
     gap: 14px !important;
   }
-
-  .form {
-    top: 400px !important;
-  }
 }
 
 @media (max-width: 500px) {
@@ -301,10 +282,6 @@ button {
     font-size: 29px !important;
   }
 
-  .form {
-    top: 420px !important;
-  }
-
   button {
     font-size: 16px;
   }
@@ -313,6 +290,10 @@ button {
 @media (max-width: 400px) {
   .photoParentDiv {
     width: 250px !important;
+  }
+
+  .form {
+    top: 390px;
   }
 
   .bm {
@@ -334,10 +315,6 @@ button {
 
   #textBox {
     gap: 12px !important;
-  }
-
-  .form {
-    top: 310px !important;
   }
 }
 
@@ -361,10 +338,6 @@ button {
 
   .textContainer {
     gap: 18px !important;
-  }
-
-  .form {
-    top: 330px !important;
   }
 
   button {
