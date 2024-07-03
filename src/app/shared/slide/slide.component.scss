@@ -25,15 +25,29 @@ nav {
   flex-direction: row;
   gap: 24px;
   font-size: 20px;
-  > a {
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
+}
 
-    &:hover {
-      color: rgb(0, 190, 232);
-      transition: color 100ms linear;
-    }
+nav > a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    color: rgb(0, 190, 232);
+    transition: color 100ms linear;
+    text-decoration: none;
+  }
+
+  &:hover::after {
+    content: "";
+    display: inline-block;
+    width: 50%;
+    height: 3px;
+    background: rgb(75, 71, 255);
+    position: absolute;
+    bottom: -8px;
+    left: 0;
   }
 }
 

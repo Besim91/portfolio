@@ -1,5 +1,6 @@
 <section>
-    <img class="form" src="./../../../assets/img/forms/curved-background.png">
+    <img *ngIf="currentPixel >= 650" class="form" src="./../../../assets/img/forms/curved-background-desktop.png">
+    <img *ngIf="currentPixel < 650" class="form" src="./../../../assets/img/forms/curved-background.png">
     <div id="container" class="maxWidth">
         <div class="photoParentDiv">
             <img class="photoLandingpage" src="./../../../assets/img/besim.png">
@@ -18,4 +19,7 @@
         </div>
     </div>
 
+    <!-- <footer>
+        hashahbjh
+    </footer> -->
 </section>

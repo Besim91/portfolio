@@ -1,10 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-landingpage',
-  standalone: true,
-  imports: [],
   templateUrl: './landingpage.component.html',
-  styleUrl: './landingpage.component.scss',
+  styleUrls: ['./landingpage.component.scss'],
+  standalone: true,
+  imports: [CommonModule],
 })
-export class LandingpageComponent {}
+export class LandingpageComponent implements OnInit {
+  currentPixel!: number;
+
+  constructor() {}
+
+  ngOnInit(): void {
+    this.updatePixelWidth();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.updatePixelWidth();
+  }
+
+  updatePixelWidth(): void {
+    this.currentPixel = window.innerWidth;
+  }
+}

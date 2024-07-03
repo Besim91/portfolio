@@ -16,7 +16,7 @@ section {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 500px;
+  top: 150px;
   z-index: 3;
   width: 100%;
 }
@@ -115,7 +115,65 @@ button {
   display: none;
 }
 
+footer {
+  z-index: 10;
+  height: 100px;
+  width: 100%;
+  background-color: yellow;
+}
+
 // ----------------------------------------------------- Responsive
+
+@media (max-width: 1800px) {
+  .form {
+    top: 170px !important;
+  }
+}
+@media (max-width: 1750px) {
+  .form {
+    top: 190px !important;
+  }
+}
+@media (max-width: 1700px) {
+  .form {
+    top: 210px !important;
+  }
+}
+@media (max-width: 1650px) {
+  .form {
+    top: 230px !important;
+  }
+}
+@media (max-width: 1600px) {
+  .form {
+    top: 250px !important;
+  }
+}
+@media (max-width: 1550px) {
+  .form {
+    top: 270px !important;
+  }
+}
+@media (max-width: 1500px) {
+  .form {
+    top: 290px !important;
+  }
+}
+@media (max-width: 1450px) {
+  .form {
+    top: 310px !important;
+  }
+}
+@media (max-width: 1400px) {
+  .form {
+    top: 330px !important;
+  }
+}
+@media (max-width: 1350px) {
+  .form {
+    top: 350px !important;
+  }
+}
 
 @media (max-width: 1300px) {
   #container {
@@ -146,6 +204,16 @@ button {
   .parentTextContainer {
     padding-right: 0;
   }
+
+  .form {
+    top: 300px !important;
+  }
+}
+
+@media (max-width: 1250px) {
+  .form {
+    top: 300px !important;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -160,6 +228,16 @@ button {
   .iAm {
     top: 154px !important;
     font-size: 54px !important;
+  }
+
+  .form {
+    top: 320px !important;
+  }
+}
+
+@media (max-width: 1150px) {
+  .form {
+    top: 330px !important;
   }
 }
 
@@ -176,6 +254,16 @@ button {
     top: 142px !important;
     font-size: 50px !important;
   }
+
+  .form {
+    top: 340px !important;
+  }
+}
+
+@media (max-width: 1050px) {
+  .form {
+    top: 360px !important;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -191,12 +279,40 @@ button {
     top: 130px !important;
     font-size: 46px !important;
   }
+
+  .form {
+    top: 370px !important;
+  }
+}
+
+@media (max-width: 950px) {
+  .form {
+    top: 380px !important;
+  }
 }
 
 @media (max-width: 900px) {
+  .form {
+    top: 390px !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .form {
+    top: 400px !important;
+  }
 }
 
 @media (max-width: 800px) {
+  .form {
+    top: 410px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .form {
+    top: 420px !important;
+  }
 }
 
 @media (max-width: 700px) {
@@ -215,6 +331,16 @@ button {
 
   #textBox {
     gap: 5px !important;
+  }
+
+  .form {
+    top: 430px !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .form {
+    top: 550px !important;
   }
 }
 
@@ -242,6 +368,10 @@ button {
 
   #textBox {
     gap: 8px !important;
+  }
+
+  .form {
+    top: 500px !important;
   }
 }
 
@@ -315,6 +445,10 @@ button {
 
   #textBox {
     gap: 12px !important;
+  }
+
+  .form {
+    top: 400px !important;
   }
 }
 
