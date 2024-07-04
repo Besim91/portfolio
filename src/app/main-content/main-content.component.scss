@@ -1,0 +1,9 @@
+* {
+  overflow-y: scroll;
+}
+
+app-footer-landing-page,
+app-introduction {
+  position: relative;
+  z-index: 999;
+}

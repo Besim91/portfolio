@@ -4,6 +4,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterLandingPageComponent } from './footer-landing-page/footer-landing-page.component';
 
 @Component({
   selector: 'app-main-content',
@@ -14,8 +15,9 @@ import { ContactComponent } from './contact/contact.component';
     LandingpageComponent,
     IntroductionComponent,
     ContactComponent,
+    FooterLandingPageComponent,
   ],
   templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss',
+  styleUrls: ['./main-content.component.scss'],
 })
 export class MainContentComponent {}
