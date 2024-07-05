@@ -1,3 +1,8 @@
 <section>
-    Besim
+    <div class="lineLeft"></div>
+    <div class="maxWidth intro">
+        <app-aboutme></app-aboutme>
+        <div *ngIf="this.currentPixel >= 1100" class="roundPhoto"></div>
+    </div>
+    <div *ngIf="this.currentPixel >= 1100" class="lineRight"></div>
 </section>
