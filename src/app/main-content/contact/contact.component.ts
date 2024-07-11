@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { FormularComponent } from './formular/formular.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [FormularComponent],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrl: './contact.component.scss',
 })
-export class ContactComponent {
-
-}
+export class ContactComponent {}

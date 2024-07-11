@@ -1,0 +1,43 @@
+@mixin alignement($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  background-color: rgb(20, 29, 47);
+  color: white;
+
+  span {
+    @include alignement(row);
+  }
+}
+
+.lineLeft {
+  height: 4px;
+  width: 109px;
+  background-color: rgb(75, 71, 255);
+}
+
+.lineRight {
+  flex-grow: 1;
+  height: 4px;
+  background-color: rgb(75, 71, 255);
+}
+
+.lineLeftEmpty {
+  flex-grow: 1;
+}
+
+.headlinePortfolio {
+  height: 110px;
+  @include alignement(row);
+  gap: 16px;
+}
+
+.headlinePortfolio span {
+  font-size: 90px;
+  font-weight: bold;
+}

@@ -1,0 +1,77 @@
+@mixin alignement($direction, $positionX, $positionY) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $positionX;
+  align-items: $positionY;
+}
+
+.infoBlock {
+  @include alignement(column, center, flex-start);
+  gap: 32px;
+  width: 520px;
+
+  div {
+    display: flex;
+    gap: 32px;
+  }
+}
+
+img {
+  width: 400px;
+}
+
+.projectBlock {
+  @include alignement(row, center, center);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  gap: 100px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: rgb(75, 71, 255);
+}
+
+.skills {
+  color: rgb(0, 190, 232);
+  font-size: 24px;
+}
+
+.liveTest {
+  width: 150px;
+  height: 58px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: rgb(75, 71, 255);
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  z-index: 3;
+
+  &:hover {
+    background-color: rgb(0, 190, 232);
+    transition: background-color 125ms ease;
+  }
+}
+
+.gitHub {
+  width: 150px;
+  height: 58px;
+  border-radius: 10px;
+  outline: none;
+  border: solid 2px rgb(0, 190, 232);
+  color: white;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  z-index: 3;
+
+  &:hover {
+    background-color: rgb(0, 190, 232);
+    transition: background-color 125ms ease;
+  }
+}

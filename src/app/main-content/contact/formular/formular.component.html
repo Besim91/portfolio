@@ -1,0 +1,15 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name.." required>
+        <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email.." required
+               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Write something.."
+                  style="height:200px" required></textarea>
+        <span *ngIf="!message.valid && message.touched" class="error-message">hahahaha geht nicht loser</span>
+        <div class="privacy-policy">
+            <input type="checkbox" id="privacy" required>
+            <label for="privacy">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</div>
