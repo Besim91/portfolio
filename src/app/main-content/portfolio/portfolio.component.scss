@@ -10,6 +10,8 @@ section {
   background-color: rgb(20, 29, 47);
   color: white;
 
+  @include alignement(column);
+
   span {
     @include alignement(row);
   }
@@ -17,13 +19,13 @@ section {
 
 .lineLeft {
   height: 4px;
-  width: 109px;
+  width: 10%;
   background-color: rgb(75, 71, 255);
 }
 
 .lineRight {
-  flex-grow: 1;
   height: 4px;
+  width: 30%;
   background-color: rgb(75, 71, 255);
 }
 
@@ -35,9 +37,71 @@ section {
   height: 110px;
   @include alignement(row);
   gap: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  z-index: 10;
 }
 
 .headlinePortfolio span {
   font-size: 90px;
   font-weight: bold;
+}
+
+.subText {
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 1200px) {
+  .headlinePortfolio span {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 900px) {
+  .headlinePortfolio span {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 650px) {
+  .headlinePortfolio span {
+    font-size: 60px;
+  }
+
+  .subText {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 550px) {
+  .headlinePortfolio span {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 450px) {
+  .headlinePortfolio span {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .headlinePortfolio span {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 350px) {
+  .headlinePortfolio span {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 300px) {
+  .headlinePortfolio span {
+    font-size: 32px;
+  }
 }

@@ -1,19 +1,25 @@
 section {
   width: 100%;
   background-color: rgb(20, 29, 47);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.lineLeft {
+.lineLeftInside {
   height: 4px;
-  width: 50px;
+  width: 84px;
   background-color: rgb(75, 71, 255);
 }
-
 .header {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 16px;
+  position: relative;
+  z-index: 10;
+  max-width: 1990px;
+  width: 100%;
 
   span {
     font-size: 90px;
@@ -27,10 +33,72 @@ section {
   justify-content: space-between;
   color: white;
   gap: 32px;
+  position: relative;
+  z-index: 10;
 
   div {
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .infoBlockEmail {
+    flex-direction: column;
+  }
+
+  .header span {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .lineLeftInside {
+    width: 5%;
+  }
+
+  .header span {
+    font-size: 60px;
+  }
+
+  .header {
+    gap: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .header span {
+    font-size: 50px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header span {
+    font-size: 40px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header span {
+    font-size: 36px;
   }
 }

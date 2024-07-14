@@ -23,7 +23,6 @@ app-aboutme {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  margin-right: 100px;
 }
 
 .intro {
@@ -36,29 +35,29 @@ app-aboutme {
   gap: 40px;
 }
 
-.lineLeft {
+.lineRightInside {
   height: 4px;
-  flex-grow: 1;
-  background-color: transparent;
-  z-index: 10;
+  width: 100px;
+  background-color: rgb(0, 190, 232);
 }
 
-.lineRight {
-  height: 4px;
-  flex-grow: 1;
-  background-color: rgb(0, 190, 232);
-  z-index: 10;
-  margin-left: -200px;
+.imgLineDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 @media (max-width: 1100px) {
   .intro {
     justify-content: center;
+    gap: 0;
   }
 
   .maxWidth {
     padding-right: 0;
   }
+
+
 
   app-aboutme {
     width: unset;

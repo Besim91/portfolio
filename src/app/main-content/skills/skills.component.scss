@@ -65,20 +65,24 @@ button {
   width: 100%;
 }
 
-.lineRight {
+.lineRightInside {
   height: 4px;
-  flex-grow: 1;
+  width: 100px;
   background-color: rgb(75, 71, 255);
-  margin-top: 48px;
-  z-index: 10;
-  border-radius: 5px;
 }
 
-.lineLeft {
+.lineRightTransparent {
   height: 4px;
-  flex-grow: 1;
+  width: 100px;
   background-color: transparent;
-  margin-right: -100px;
+}
+
+.skillsTextHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
 }
 
 app-icons {
@@ -87,6 +91,7 @@ app-icons {
   flex-wrap: wrap;
   width: 100%;
   gap: 50px;
+  margin-left: 100px;
 }
 
 @media (max-width: 1350px) {
@@ -153,6 +158,7 @@ app-icons {
   app-icons {
     order: 2;
     justify-content: center;
+    margin-left: 0;
   }
 
   button {
@@ -166,5 +172,16 @@ app-icons {
   .maxWidth {
     padding-left: 5%;
     padding-right: 5%;
+  }
+  .lineRightInside {
+    width: 5%;
+  }
+
+  .lineRightTransparent {
+    width: 5%;
+  }
+
+  .infoSkills {
+    padding-left: 5%;
   }
 }

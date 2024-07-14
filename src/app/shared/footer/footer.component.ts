@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
+  currentPixel!: number;
 
+  ngOnInit(): void {
+    this.updatePixelWidth();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.updatePixelWidth();
+  }
+
+  updatePixelWidth(): void {
+    this.currentPixel = window.innerWidth;
+  }
 }

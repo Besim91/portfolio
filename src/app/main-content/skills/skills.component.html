@@ -1,13 +1,17 @@
 <section>
-    <!-- <div class="lineLeft"></div> -->
-    <div class="maxWidth skills">
+    <div class="skills">
         <app-icons></app-icons>
         <div class="skillsText">
-            <span class="title">My skills </span>
-            <span class="infoSkills">I have grownmy frontend developments skills that have allowed me to create different real projects</span>
+            <div class="skillsTextHeader">
+                <span class="title">My skills </span>
+                <div class="lineRightInside"></div>
+            </div>
+            <div class="skillsTextHeader">
+                <span class="infoSkills">I have grownmy frontend developments skills that have allowed me to create different real projects</span>
+                <div class="lineRightTransparent"></div>
+            </div>
             <button *ngIf="currentPixel >= 860">Get in touch</button>
         </div>
         <button *ngIf="currentPixel < 860">Get in touch</button>
     </div>
-    <!-- <div class="lineRight"></div> -->
 </section>

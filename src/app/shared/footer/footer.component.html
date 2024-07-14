@@ -1,1 +1,24 @@
-<p>footer works!</p>
+<footer>
+    <div class="maxWidth subFooter">
+        <div class="nameImprint">
+            <a class="name">
+                <span>B</span>
+                <span>e</span>
+                <span>s</span>
+                <span>i</span>
+                <span>m</span>
+            </a>
+            <a *ngIf="currentPixel >= 700" class="imprint" href="">Imprint</a>
+
+        </div>
+        <div class="copyright">© Besim Mustafi</div>
+
+        <nav>
+            <a href=""><img src="./../../../assets/img/icons/git.png"></a>
+            <a href=""><img src="./../../../assets/img/icons/mail.png"></a>
+            <a href=""><img src="./../../../assets/img/icons/in.png"></a>
+        </nav>
+
+        <a *ngIf="currentPixel < 700" class="imprint" href="">Imprint</a>
+    </div>
+</footer>

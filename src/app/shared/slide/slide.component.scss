@@ -39,15 +39,20 @@ nav > a {
     text-decoration: none;
   }
 
-  &:hover::after {
+  &::after {
     content: "";
     display: inline-block;
-    width: 50%;
+    width: 0;
     height: 3px;
     background: rgb(75, 71, 255);
     position: absolute;
     bottom: -8px;
     left: 0;
+    transition: width 125ms ease-in-out; /* Transition für Erscheinen und Verschwinden */
+  }
+
+  &:hover::after {
+    width: 50%;
   }
 }
 
