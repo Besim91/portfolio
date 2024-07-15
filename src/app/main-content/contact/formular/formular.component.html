@@ -32,7 +32,8 @@
                        [class.invalid]="formSubmitted && !privacy.valid" [class.valid]="privacy.valid && formSubmitted">
             </div>
             <div>
-                <label for="privacy">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
+                <label for="privacy">I've read the <a href="privacyPolicy">privacy policy</a> and agree to the processing of my data as
+                    outlined.</label>
             </div>
         </div>
         <span class="errorMessage" *ngIf="formSubmitted && !privacy.valid">Please accept the privacy policy</span>
@@ -41,5 +42,5 @@
         </div>
 
     </form>
-    <div class="goUp"><a href=""><img src="./../../../../assets/img/forms/goup.png"></a></div>
+    <div class="goUp"><a href="#header"><img src="./../../../../assets/img/forms/goup.png"></a></div>
 </div>

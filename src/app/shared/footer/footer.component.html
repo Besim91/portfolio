@@ -1,24 +1,25 @@
 <footer>
     <div class="maxWidth subFooter">
         <div class="nameImprint">
-            <a class="name">
+            <a class="name" href="#header">
                 <span>B</span>
                 <span>e</span>
                 <span>s</span>
                 <span>i</span>
                 <span>m</span>
             </a>
-            <a *ngIf="currentPixel >= 700" class="imprint" href="">Imprint</a>
+            <a *ngIf="currentPixel >= 700" class="imprint" href="imprint">Imprint</a>
 
         </div>
         <div class="copyright">© Besim Mustafi</div>
 
         <nav>
-            <a href=""><img src="./../../../assets/img/icons/git.png"></a>
-            <a href=""><img src="./../../../assets/img/icons/mail.png"></a>
-            <a href=""><img src="./../../../assets/img/icons/in.png"></a>
+            <a href="https://github.com/" target="_blank"><img src="./../../../assets/img/icons/git.png"></a>
+            <a href="mailto:besimnaim@gmail.com"><img src="./../../../assets/img/icons/mail.png"></a>
+            <a href="https://www.linkedin.com/in/besim-mustafi-7486542a4/
+                " target="_blank"><img src="./../../../assets/img/icons/in.png"></a>
         </nav>
 
-        <a *ngIf="currentPixel < 700" class="imprint" href="">Imprint</a>
+        <a *ngIf="currentPixel < 700" class="imprint" href="imprint">Imprint</a>
     </div>
 </footer>

@@ -1,4 +1,4 @@
-<header>
+<header id="header" >
     <div class="maxWidth">
         <a class="name">
             <span>B</span>
@@ -10,9 +10,9 @@
         <img *ngIf="this.controll.isBurgerMenuVisible" (click)="toggleSidebar()" id="burgerMenu" class="burgerMenu"
              src="./../../../assets/img/forms/burger menu.png" alt="burgerMenu">
         <nav class="links">
-            <a href="">About me</a>
-            <a href="">Skills</a>
-            <a href="">Portfolio</a>
+            <a href="#aboutMe">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
         </nav>
     </div>
 </header>
