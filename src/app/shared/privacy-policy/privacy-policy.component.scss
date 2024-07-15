@@ -1,7 +1,44 @@
 section {
-    height: 100vh;
-    width: 100%;
-    background-color: yellow;
-    z-index: 1000;
+  width: 100%;
+  background-color: rgb(20, 29, 47);
+  z-index: 10;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.title {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 24px;
+  font-weight: bold;
+  width: 500px;
+}
+
+.pp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goBack {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  a {
+    img {
+      width: 30px;
+      height: 30px;
+      transition: filter 125ms ease-in-out;
+      transform: rotate(-90deg);
+
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(72%) sepia(67%)
+          saturate(5165%) hue-rotate(152deg) brightness(99%) contrast(105%);
+        cursor: pointer;
+      }
+    }
   }
-  
+}
