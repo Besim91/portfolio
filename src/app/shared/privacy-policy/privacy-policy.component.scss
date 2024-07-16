@@ -1,10 +1,27 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
 section {
-  width: 100%;
   background-color: rgb(20, 29, 47);
+  position: relative;
   z-index: 10;
   color: white;
   padding-top: 50px;
   padding-bottom: 50px;
+  height: calc(100vh - 300px);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  a {
+    color: #4b47ff;
+  }
+}
+
+section::-webkit-scrollbar {
+  display: none;
 }
 
 .title {
@@ -40,5 +57,16 @@ section {
         cursor: pointer;
       }
     }
+  }
+}
+
+@media (max-width: 700px) {
+  :host {
+    height: calc(100vh - 350px);
+  }
+
+  section {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }

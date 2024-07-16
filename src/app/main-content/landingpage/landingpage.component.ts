@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-landingpage',
   templateUrl: './landingpage.component.html',
-  styleUrls: ['./landingpage.component.scss'],
+  styleUrls: ['./landingpage.component.scss', './responsive.component.scss'],
   standalone: true,
   imports: [CommonModule],
 })

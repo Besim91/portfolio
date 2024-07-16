@@ -39,6 +39,8 @@ app-aboutme {
   height: 4px;
   width: 100px;
   background-color: rgb(0, 190, 232);
+  position: relative;
+  z-index: 10;
 }
 
 .imgLineDiv {
@@ -56,8 +58,6 @@ app-aboutme {
   .maxWidth {
     padding-right: 0;
   }
-
-
 
   app-aboutme {
     width: unset;

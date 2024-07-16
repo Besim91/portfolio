@@ -1,0 +1,363 @@
+@media (max-width: 1800px) {
+  .form {
+    top: 170px !important;
+  }
+}
+@media (max-width: 1750px) {
+  .form {
+    top: 190px !important;
+  }
+}
+@media (max-width: 1700px) {
+  .form {
+    top: 210px !important;
+  }
+}
+@media (max-width: 1650px) {
+  .form {
+    top: 230px !important;
+  }
+}
+@media (max-width: 1600px) {
+  .form {
+    top: 250px !important;
+  }
+}
+@media (max-width: 1550px) {
+  .form {
+    top: 270px !important;
+  }
+}
+@media (max-width: 1500px) {
+  .form {
+    top: 290px !important;
+  }
+}
+@media (max-width: 1450px) {
+  .form {
+    top: 310px !important;
+  }
+}
+@media (max-width: 1400px) {
+  .form {
+    top: 330px !important;
+  }
+}
+@media (max-width: 1350px) {
+  .form {
+    top: 350px !important;
+  }
+}
+
+@media (max-width: 1300px) {
+  #container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start !important;
+  }
+
+  .textContainer {
+    justify-content: center;
+    width: 100%;
+    padding-top: 30px !important;
+  }
+
+  .photoParentDiv {
+    width: 400px;
+    flex: unset !important;
+  }
+
+  .photoLandingpage {
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .backgroundForm {
+    width: 200%;
+  }
+  .parentTextContainer {
+    padding-right: 0;
+  }
+
+  .form {
+    top: 300px !important;
+  }
+}
+
+@media (max-width: 1250px) {
+  .form {
+    top: 300px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .bm {
+    font-size: 80px !important;
+  }
+
+  .fd {
+    font-size: 55px !important;
+  }
+
+  .iAm {
+    top: 154px !important;
+    font-size: 54px !important;
+  }
+
+  .form {
+    top: 320px !important;
+  }
+}
+
+@media (max-width: 1150px) {
+  .form {
+    top: 330px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .bm {
+    font-size: 75px !important;
+  }
+
+  .fd {
+    font-size: 52px !important;
+  }
+
+  .iAm {
+    top: 142px !important;
+    font-size: 50px !important;
+  }
+
+  .form {
+    top: 340px !important;
+  }
+}
+
+@media (max-width: 1050px) {
+  .form {
+    top: 360px !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .bm {
+    font-size: 70px !important;
+  }
+
+  .fd {
+    font-size: 48px !important;
+  }
+
+  .iAm {
+    top: 130px !important;
+    font-size: 46px !important;
+  }
+
+  .form {
+    top: 370px !important;
+  }
+}
+
+@media (max-width: 950px) {
+  .form {
+    top: 380px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .form {
+    top: 390px !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .form {
+    top: 400px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .form {
+    top: 410px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .form {
+    top: 420px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .bm {
+    font-size: 65px !important;
+  }
+
+  .fd {
+    font-size: 44px !important;
+  }
+
+  .iAm {
+    top: 115px !important;
+    font-size: 41px !important;
+  }
+
+  #textBox {
+    gap: 5px !important;
+  }
+
+  .form {
+    top: 430px !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .form {
+    top: 550px !important;
+  }
+
+  .maxWidth {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .lineLeftInside {
+    width: 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .photoParentDiv {
+    width: 350px;
+  }
+
+  .bm {
+    font-size: 60px !important;
+  }
+
+  .fd {
+    font-size: 41px !important;
+  }
+
+  .iAm {
+    top: 110px !important;
+    font-size: 40px !important;
+  }
+
+  .textContainer {
+    gap: 10px !important;
+  }
+
+  #textBox {
+    gap: 8px !important;
+  }
+
+  .form {
+    top: 500px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .bm {
+    font-size: 50px !important;
+  }
+
+  .fd {
+    font-size: 34px !important;
+  }
+
+  .iAm {
+    top: 93px !important;
+    font-size: 33px !important;
+  }
+
+  #textBox {
+    gap: 10px !important;
+  }
+
+  .textContainer {
+    gap: 14px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .bm {
+    font-size: 45px !important;
+  }
+
+  .fd {
+    font-size: 30px !important;
+  }
+
+  .iAm {
+    top: 83px !important;
+    font-size: 29px !important;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .photoParentDiv {
+    width: 250px !important;
+  }
+
+  .form {
+    top: 390px;
+  }
+
+  .bm {
+    font-size: 40px !important;
+  }
+
+  .fd {
+    font-size: 27px !important;
+  }
+
+  .iAm {
+    top: 72px !important;
+    font-size: 25px !important;
+  }
+
+  .textContainer {
+    gap: 16px !important;
+  }
+
+  #textBox {
+    gap: 12px !important;
+  }
+
+  .form {
+    top: 400px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .bm {
+    font-size: 35px !important;
+  }
+
+  .fd {
+    font-size: 24px !important;
+  }
+
+  .iAm {
+    top: 65px !important;
+    font-size: 23px !important;
+  }
+
+  #textBox {
+    gap: 16px !important;
+  }
+
+  .textContainer {
+    gap: 18px !important;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

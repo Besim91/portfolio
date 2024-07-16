@@ -24,7 +24,7 @@ export class FormularComponent {
   formSubmitted = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://besimmustafi.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -38,8 +38,9 @@ export class FormularComponent {
     this.formSubmitted = true;
 
     const formElement = document.querySelector('form');
-    if (ngForm.valid) {
+    if (ngForm.valid && ngForm.submitted) {
       formElement?.classList.add('submittedAllValid');
+      console.log(this.contactData);
     } else {
       formElement?.classList.remove('submittedAllValid');
     }

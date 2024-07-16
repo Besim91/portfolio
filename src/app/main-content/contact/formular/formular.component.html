@@ -38,7 +38,7 @@
         </div>
         <span class="errorMessage" *ngIf="formSubmitted && !privacy.valid">Please accept the privacy policy</span>
         <div class="submitBtn">
-            <input type="submit" value="Send message" [class.blue]="allFieldsValid()">
+            <input type="submit" value="Send message" [class.blue]="allFieldsValid()" [disabled]="!allFieldsValid()">
         </div>
 
     </form>
