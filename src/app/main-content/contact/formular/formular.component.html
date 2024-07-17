@@ -1,33 +1,38 @@
 <div class="container">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-        <label for="name">Name</label>
-        <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name.." required="">
-        @if (!name.valid ) {
-        <span>Your name is required</span>
-        }
-
-        <label for="email">Email</label>
-        <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email" placeholder="Your email.."
-               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required="">
-        @if (!email.valid) {
-        <span>Your email is required</span>
-        }
-
-        <label for="message">Subject</label>
-        <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your text.." style="height:200px"
-                  required=""></textarea>
-        @if (!message.valid && message.touched) {
-        <span>Your message is empty</span>
-        }
-
-        <div>
-            <input type="checkbox">
-            <span>I've read the <a href="privacyPolicy">privacy policy</a> and agree to the processing of my data as
-                outlined</span>
+        <div class="input-container">
+            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name.." required
+                   [class.invalid]="!name.valid && name.touched" [class.valid]="name.valid && name.touched">
+            <img *ngIf="!name.valid && name.touched" src="./../../../../assets/img/forms/fail.png" class="inputFail">
+            <img *ngIf="name.valid && name.touched" src="./../../../../assets/img/forms/ok.png" class="inputValid">
+            <span *ngIf="!name.valid && name.touched" class="requirements">Your name is required</span>
         </div>
 
-        <input type="submit" value="Send message">
+        <div class="input-container">
+            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email.."
+                   pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required [class.invalid]="!email.valid && email.touched"
+                   [class.valid]="email.valid && email.touched">
+            <img *ngIf="!email.valid && email.touched" src="./../../../../assets/img/forms/fail.png" class="inputFail">
+            <img *ngIf="email.valid && email.touched" src="./../../../../assets/img/forms/ok.png" class="inputValid">
+            <span *ngIf="!email.valid && email.touched" class="requirements">Your email is required</span>
+        </div>
 
+        <div class="input-container">
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your text.." style="height:200px"
+                      required [class.invalid]="!message.valid && message.touched" [class.valid]="message.valid && message.touched"></textarea>
+            <img *ngIf="!message.valid && message.touched" src="./../../../../assets/img/forms/fail.png" class="inputFail">
+            <img *ngIf="message.valid && message.touched" src="./../../../../assets/img/forms/ok.png" class="inputValid">
+            <span *ngIf="!message.valid && message.touched" class="requirements">Your message is empty</span>
+        </div>
+
+        <div class="privacy-policy">
+            <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" id="checkbox" required
+                   [class.invalid]="!checkbox.valid && checkbox.touched" [class.valid]="checkbox.valid && checkbox.touched">
+            <span>I've read the <a href="privacyPolicy">privacy policy</a> and agree to the processing of my data as outlined</span>
+        </div>
+        <span *ngIf="!checkbox.valid && checkbox.touched" class="requirements">You must agree to the privacy policy</span>
+
+        <input type="submit" value="Send message" disabled>
     </form>
 </div>
