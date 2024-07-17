@@ -52,6 +52,10 @@ img {
   cursor: pointer;
   transition: background-color 0.1s ease;
   z-index: 3;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: rgb(0, 190, 232);
@@ -71,6 +75,10 @@ img {
   cursor: pointer;
   transition: background-color 0.1s ease;
   z-index: 3;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: rgb(0, 190, 232);

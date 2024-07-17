@@ -1,225 +1,36 @@
-body {
-  background-color: transparent;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-.container {
-  padding-bottom: 20px;
-  max-width: 600px;
-  background-color: transparent;
-  border-radius: 10px;
-}
-
-.inputContainer {
-  position: relative;
-  width: 100%;
-  margin-top: 12px;
-}
-
+/* Style inputs with type="text", select elements and textareas */
 input[type="text"],
-input[type="email"],
+[type="email"],
 select,
 textarea {
-  width: 100%;
-  padding: 12px;
-  padding-left: 40px; // Platz für das Icon
-  border: 1px solid #4b47ff;
-  border-radius: 10px;
-  box-sizing: border-box;
-  resize: vertical;
-  background-color: transparent;
-  color: #ffffff;
-
-  &::placeholder {
-    color: #ffffff;
-  }
-
-  &:hover {
-    border-color: #1ce6b6;
-    cursor: pointer;
-  }
-
-  &:focus {
-    border-color: #1ce6b6;
-    outline: none;
-    background-color: transparent;
-  }
-
-  &.invalid {
-    border-color: #ff0000; // Rot
-  }
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
-.inputIcon {
-  position: absolute;
-  right: 10px;
-  top: 22px;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-
-  &.ok {
-    display: none;
-  }
-
-  &.fail {
-    display: none;
-  }
-}
-
+/* Style the submit button with a specific background color etc */
 input[type="submit"] {
-  background-color: #b6b6b6;
-  width: 100%;
-  height: 55px;
+  background-color: #04aa6d;
   color: white;
+  padding: 12px 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 24px;
-
-  &.blue {
-    background-color: #00bee8;
-  }
 }
 
-.errorMessage {
-  color: #ff0000;
-  font-size: 12px;
-  display: none;
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #45a049;
 }
 
-form.submitted .errorMessage {
-  display: block;
-}
-
-form.submitted input.valid + .inputIcon.ok,
-form.submitted textarea.valid + .inputIcon.ok {
-  display: block;
-}
-
-form.submitted input.invalid + .inputIcon.fail,
-form.submitted textarea.invalid + .inputIcon.fail {
-  display: block;
-}
-
-form.submitted input.valid,
-form.submitted textarea.valid {
-  border-color: #00ff00; // Grün
-}
-
-.lineLeft {
-  height: 4px;
-  width: 50px;
-  background-color: rgb(75, 71, 255);
-}
-
-.privacyPolicy {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-
-  a {
-    color: #4b47ff;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-#privacy {
-  width: 20px;
-  height: 20px;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  border: 2px solid #00bee8;
-  border-radius: 3px;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#privacy::after {
-  content: "";
-  width: 5px;
-  height: 9px;
-  border: solid #00bee8;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-  display: none;
-}
-
-#privacy:checked::after {
-  display: block;
-}
-
-form.submittedAllValid input[type="text"],
-form.submittedAllValid input[type="email"],
-form.submittedAllValid textarea {
-  border-color: #00ff00; // Grün
-}
-
-form.submittedAllValid .inputIcon.ok {
-  display: block;
-}
-
-.goUp {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 50px;
-
-  a {
-    img {
-      width: 30px;
-      height: 30px;
-      transition: filter 125ms ease-in-out;
-
-      &:hover {
-        filter: brightness(0) saturate(100%) invert(72%) sepia(67%)
-          saturate(5165%) hue-rotate(152deg) brightness(99%) contrast(105%);
-        cursor: pointer;
-      }
-    }
-  }
-}
-
-.submitBtn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-  input {
-    width: 210px;
-  }
-}
-
-@media (max-width: 900px) {
-  .container {
-    max-width: unset;
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .container {
-    max-width: unset;
-    width: 100%;
-  }
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }

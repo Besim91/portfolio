@@ -1,46 +1,33 @@
 <div class="container">
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" [class.submitted]="formSubmitted" novalidate>
-        <div class="inputContainer">
-            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name.." required
-                   [class.invalid]="formSubmitted && !name.valid" [class.valid]="name.valid && formSubmitted">
-            <img *ngIf="formSubmitted && !name.valid" src="./../../../../assets/img/forms/fail.png" class="inputIcon" alt="Icon">
-            <img *ngIf="name.valid && formSubmitted" src="./../../../../assets/img/forms/ok.png" class="inputIcon" alt="Icon">
-        </div>
-        <span class="errorMessage" *ngIf="formSubmitted && !name.valid">Your name is required</span>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-        <div class="inputContainer">
-            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email.." required
-                   pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" [class.invalid]="formSubmitted && !email.valid"
-                   [class.valid]="email.valid && formSubmitted">
-            <img *ngIf="formSubmitted && !email.valid" src="./../../../../assets/img/forms/fail.png" class="inputIcon" alt="Icon">
-            <img *ngIf="email.valid && formSubmitted" src="./../../../../assets/img/forms/ok.png" class="inputIcon" alt="Icon">
-        </div>
-        <span class="errorMessage" *ngIf="formSubmitted && !email.valid">Your email is required</span>
+        <label for="name">Name</label>
+        <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name.." required="">
+        @if (!name.valid ) {
+        <span>Your name is required</span>
+        }
 
-        <div class="inputContainer">
-            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Write something.."
-                      style="height:200px" required [class.invalid]="formSubmitted && !message.valid"
-                      [class.valid]="message.valid && formSubmitted"></textarea>
-            <img *ngIf="formSubmitted && !message.valid" src="./../../../../assets/img/forms/fail.png" class="inputIcon" alt="Icon">
-            <img *ngIf="message.valid && formSubmitted" src="./../../../../assets/img/forms/ok.png" class="inputIcon" alt="Icon">
-        </div>
-        <span class="errorMessage" *ngIf="formSubmitted && !message.valid">Your message is empty</span>
+        <label for="email">Email</label>
+        <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email" placeholder="Your email.."
+               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required="">
+        @if (!email.valid) {
+        <span>Your email is required</span>
+        }
 
-        <div class="privacyPolicy">
-            <div class="checkboxDiv">
-                <input #privacy="ngModel" [(ngModel)]="contactData.privacy" type="checkbox" id="privacy" name="privacy" required
-                       [class.invalid]="formSubmitted && !privacy.valid" [class.valid]="privacy.valid && formSubmitted">
-            </div>
-            <div>
-                <label for="privacy">I've read the <a href="privacyPolicy">privacy policy</a> and agree to the processing of my data as
-                    outlined.</label>
-            </div>
+        <label for="message">Subject</label>
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your text.." style="height:200px"
+                  required=""></textarea>
+        @if (!message.valid && message.touched) {
+        <span>Your message is empty</span>
+        }
+
+        <div>
+            <input type="checkbox">
+            <span>I've read the <a href="privacyPolicy">privacy policy</a> and agree to the processing of my data as
+                outlined</span>
         </div>
-        <span class="errorMessage" *ngIf="formSubmitted && !privacy.valid">Please accept the privacy policy</span>
-        <div class="submitBtn">
-            <input type="submit" value="Send message" [class.blue]="allFieldsValid()" [disabled]="!allFieldsValid()">
-        </div>
+
+        <input type="submit" value="Send message">
 
     </form>
-    <div class="goUp"><a href="#header"><img src="./../../../../assets/img/forms/goup.png"></a></div>
 </div>

@@ -12,4 +12,6 @@ export class ProjectReverseComponent {
   @Input() title: string = '';
   @Input() skills: string = '';
   @Input() description: string = '';
+  @Input() link: string = '';
+  @Input() linkTest: string = '';
 }
