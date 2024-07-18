@@ -27,12 +27,17 @@
         </div>
 
         <div class="privacy-policy">
-            <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" id="checkbox" required
-                   [class.invalid]="!checkbox.valid && checkbox.touched" [class.valid]="checkbox.valid && checkbox.touched">
+            <div>
+                <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" id="checkbox" name="checkbox" required>
+            </div>
+
             <span>I've read the <a href="privacyPolicy">privacy policy</a> and agree to the processing of my data as outlined</span>
         </div>
-        <span *ngIf="!checkbox.valid && checkbox.touched" class="requirements">You must agree to the privacy policy</span>
 
-        <input type="submit" value="Send message" disabled>
+        <span *ngIf="!checkbox.valid && checkbox.touched" class="requirements">You must agree to the privacy policy</span>
+        <div class="subDiv">
+            <input type="submit" value="Send message" [disabled]="!contactForm.form.valid && !contactData.checkbox"
+                   [class.babyBlue]="contactForm.form.valid && contactData.checkbox">
+        </div>
     </form>
 </div>
