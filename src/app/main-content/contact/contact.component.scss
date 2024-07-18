@@ -1,13 +1,16 @@
 :host {
-  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 section {
   width: 100%;
+  max-width: 1990px;
   background-color: rgb(20, 29, 47);
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .lineLeftInside {
@@ -52,6 +55,7 @@ section {
   bottom: 0;
   left: 0;
   width: 400px;
+  z-index: 10;
 }
 
 .title {

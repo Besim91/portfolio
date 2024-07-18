@@ -1,5 +1,11 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
 section {
   width: 100%;
+  max-width: 1990px;
   background-color: rgb(20, 29, 47);
   display: flex;
   justify-content: center;

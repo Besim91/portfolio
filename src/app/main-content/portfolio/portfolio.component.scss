@@ -1,6 +1,4 @@
-:host {
-  position: relative;
-}
+
 
 @mixin alignement($direction) {
   display: flex;
@@ -57,21 +55,9 @@ section {
   z-index: 10;
 }
 
-.groupFive {
-  position: absolute;
-  left: 0;
-  width: 400px;
-  top: 200px;
-  z-index: 10;
-}
 
-.groupSix {
-  position: absolute;
-  right: 0;
-  width: 400px;
-  top: 400px;
-  z-index: 10;
-}
+
+
 
 app-project {
   z-index: 11;

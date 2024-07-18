@@ -1,3 +1,9 @@
+:host {
+  position: relative;
+  max-width: 1990px;
+    width: 100%;
+}
+
 @mixin alignement($direction, $positionX, $positionY) {
   display: flex;
   flex-direction: $direction;
@@ -61,6 +67,15 @@ img {
     background-color: rgb(0, 190, 232);
     transition: background-color 125ms ease;
   }
+}
+
+.groupSix {
+  position: absolute;
+  right: 0;
+  width: 400px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
 .gitHub {
