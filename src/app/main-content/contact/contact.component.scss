@@ -1,3 +1,7 @@
+:host {
+  position: relative;
+}
+
 section {
   width: 100%;
   background-color: rgb(20, 29, 47);
@@ -43,6 +47,13 @@ section {
   }
 }
 
+.groupSeven {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+}
+
 .title {
   font-size: 32px;
   font-weight: bold;
@@ -55,6 +66,10 @@ section {
 
   .header span {
     font-size: 70px;
+  }
+
+  .groupSeven {
+    width: 200px;
   }
 }
 

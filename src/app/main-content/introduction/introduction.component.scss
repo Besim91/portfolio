@@ -13,13 +13,14 @@ app-aboutme {
 
 .roundPhoto {
   position: relative;
-  z-index: 10;
+  z-index: 11;
   width: 500px;
   aspect-ratio: 1/1;
   border-radius: 100%;
   border: solid 4px rgb(0, 190, 232);
   overflow: hidden;
-  background-image: url(./../../../assets/img/besim.png);
+  background-color: rgb(20, 29, 47);
+  background-image: url(./../../../assets/img/besim2.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -40,13 +41,22 @@ app-aboutme {
   width: 100px;
   background-color: rgb(0, 190, 232);
   position: relative;
-  z-index: 10;
+  z-index: 11;
 }
 
 .imgLineDiv {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
+
+  img {
+    position: absolute;
+    right: 0;
+    top: -100px;
+    width: 280px;
+    z-index: 10;
+  }
 }
 
 @media (max-width: 1100px) {

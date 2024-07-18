@@ -1,3 +1,7 @@
+:host {
+  position: relative;
+}
+
 @mixin alignement($direction) {
   display: flex;
   flex-direction: $direction;
@@ -53,6 +57,30 @@ section {
   z-index: 10;
 }
 
+.groupFive {
+  position: absolute;
+  left: 0;
+  width: 400px;
+  top: 200px;
+  z-index: 10;
+}
+
+.groupSix {
+  position: absolute;
+  right: 0;
+  width: 400px;
+  top: 400px;
+  z-index: 10;
+}
+
+app-project {
+  z-index: 11;
+}
+
+app-project-reverse {
+  z-index: 11;
+}
+
 @media (max-width: 1200px) {
   .headlinePortfolio span {
     font-size: 80px;
@@ -62,6 +90,17 @@ section {
 @media (max-width: 900px) {
   .headlinePortfolio span {
     font-size: 70px;
+  }
+}
+
+@media (max-width: 800px) {
+  .groupFive {
+    width: 200px;
+  }
+
+  .groupSix {
+    width: 200px;
+    top: 600px;
   }
 }
 

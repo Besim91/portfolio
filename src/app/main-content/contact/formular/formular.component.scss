@@ -151,3 +151,24 @@ input[type="submit"] {
   display: flex;
   justify-content: center;
 }
+
+.goUp {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 50px;
+
+  a {
+    img {
+      width: 30px;
+      height: 30px;
+      transition: filter 125ms ease-in-out;
+
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(72%) sepia(67%)
+          saturate(5165%) hue-rotate(152deg) brightness(99%) contrast(105%);
+        cursor: pointer;
+      }
+    }
+  }
+}
