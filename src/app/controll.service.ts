@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root',
@@ -8,8 +9,7 @@ export class ControllService {
   sidebarOpenSubject = new BehaviorSubject<boolean>(false);
   sidebarOpen$ = this.sidebarOpenSubject.asObservable();
   isBurgerMenuVisible = true;
-
-  
+  selectedLanguage: string = 'en';
 
   images = [
     './../../../assets/img/forms/burger menu.png',
@@ -31,7 +31,7 @@ export class ControllService {
     { img: '/assets/img/icons/material.png', title: 'Material design' },
   ];
 
-  constructor() {}
+  constructor(private translate: TranslateService) {}
 
   toggleSidebar() {
     this.sidebarOpenSubject.next(!this.sidebarOpenSubject.value);
@@ -45,8 +45,24 @@ export class ControllService {
         let img = document.getElementById(
           'burgerMenuSlide'
         ) as HTMLImageElement;
-        img.src = imageUrl;
+        if (img) {
+          img.src = imageUrl;
+        }
       }, 125 * index);
     });
+  }
+
+  setStandardLanguage() {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
+
+  switchLanguage(event: Event): void {
+    const language = (event.target as HTMLSelectElement).value;
+
+    if (language && language !== this.selectedLanguage) {
+      this.translate.use(language);
+      this.selectedLanguage = language;
+    }
   }
 }

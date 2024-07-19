@@ -3,15 +3,15 @@
         <app-icons></app-icons>
         <div class="skillsText">
             <div class="skillsTextHeader">
-                <span class="title">My skills </span>
+                <span class="title">{{ 'skills.mySkills' | translate }}</span>
                 <div class="lineRightInside"></div>
             </div>
             <div class="skillsTextHeader">
-                <span class="infoSkills">I have grownmy frontend developments skills that have allowed me to create different real projects</span>
+                <span class="infoSkills">{{ 'skills.text' | translate }}</span>
                 <div class="lineRightTransparent"></div>
             </div>
-            <a href="#contact"><button *ngIf="currentPixel >= 860">Get in touch</button></a>
+            <a href="#contact"><button *ngIf="currentPixel >= 860">{{ 'skills.getInTouch' | translate }}</button></a>
         </div>
-        <a href="#contact"><button *ngIf="currentPixel < 860">Get in touch</button></a>
+        <a href="#contact"><button *ngIf="currentPixel < 860">{{ 'skills.getInTouch' | translate }}</button></a>
     </div>
 </section>

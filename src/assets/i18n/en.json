@@ -1,0 +1,46 @@
+{
+    "header": {
+      "aboutMe": "About me",
+      "skills": "Skills",
+      "portfolio": "Portfolio"
+    },
+    "landingPage": {
+      "iAm": "I am",
+      "frontendDeveloper": "Frontend Developer",
+      "letsTalk": "Let's talk!"
+    },
+    "intro": {
+      "introText": "Hello and welcome to my page! I am a front-end developer from Tuttlingen, Germany, and I am pleased to have you here. My goal is to work with you to develop the best digital solutions for your company. I am eager to learn more about your projects and how we can collaborate to make your business even more successful. Let's start this exciting journey together!",
+      "bulbText": "Programming is the realization of a dream for me. It gives me the opportunity to turn creative ideas into reality and tackle complex challenges. The constant advancement and learning of new technologies fascinate and motivate me. I take pride in creating something valuable from nothing that provides real benefits. Every line of code brings me closer to my goal of developing innovative and functional solutions that make a tangible difference.",
+      "puzzleText": "The foundation of my journey into programming was my ability to solve complex problems, a skill that has always been with me. Understanding how to break down large challenges into manageable parts and applying logical thinking to develop effective solutions has fundamentally changed my approach to programming. These experiences have enabled me to create innovative and functional solutions that provide real value."
+    },
+    "skills": {
+      "mySkills": "My Skills",
+      "text": "I have grownmy frontend developments skills that have allowed me to create different real projects",
+      "getInTouch": "Get in Touch!"
+    },
+    "portfolio": {
+      "subText": "Explore a selection of my work here - Interact with projects to see my skills in action. übersetzte das ins deutsche",
+      "projectOne": "A task manager based on the Kanban system. Tasks can be created and organized using drag-and-drop. Assign users and categories to keep everything organized.",
+      "projectTwo": "A simple Jump-and-run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken."
+    },
+    "contact": {
+      "contactHeader": "Contact",
+      "textOne": "Got problem to solve?",
+      "textTwo": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work",
+      "textThree": "Need a Frontend developer? ",
+      "textFour": "Contact me!",
+      "yourName": "Your Name ...",
+      "yourEmail": "Your Email ...",
+      "message": "Your Message ...",
+      "privacyPolicyOne": "I have read the",
+      "privacyPolicyTwo": "privacy policy",
+      "privacyPolicyThree": "and agree to the processing of my data as described.",
+      "sendMessage": "Send Message",
+      "errorOne": "Your name is required",
+      "errorTwo": "Your email is required",
+      "errorThree": "Your message is empty",
+      "errorFour": "You must agree to the privacy policy"
+    }
+  }
+  

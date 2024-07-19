@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
@@ -6,6 +6,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { SlideComponent } from './shared/slide/slide.component';
 import { FormsModule } from '@angular/forms';
+import { ControllService } from './controll.service';
 
 @Component({
   selector: 'app-root',
@@ -23,5 +24,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'portfolio';
+  controll = inject(ControllService);
+
+  constructor() {
+    this.controll.setStandardLanguage();
+  }
 }

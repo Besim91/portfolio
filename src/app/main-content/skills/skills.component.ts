@@ -2,11 +2,12 @@ import { Component, inject, HostListener } from '@angular/core';
 import { ControllService } from './../../controll.service';
 import { CommonModule } from '@angular/common';
 import { IconsComponent } from './icons/icons.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, IconsComponent],
+  imports: [CommonModule, IconsComponent, TranslateModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })

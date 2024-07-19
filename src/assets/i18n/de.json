@@ -1,0 +1,46 @@
+{
+    "header":{
+        "aboutMe": "Über mich",
+        "skills": "Skills",
+        "Portfolio": "Portfolio"
+    },
+    "landingPage": {
+        "iAm": "Ich bin",
+        "frontendDeveloper": "Frontend Entwickler",
+        "letsTalk": "Lass uns reden!"
+    },
+    "intro":{
+        "introText": "Hallo und herzlich willkommen auf meiner Seite! Ich bin ein Front-End-Entwickler aus Tuttlingen, Deutschland, und es freut mich, dass Sie hier sind. Mein Ziel ist es, gemeinsam mit Ihnen die besten digitalen Lösungen für Ihr Unternehmen zu entwickeln. Ich bin gespannt darauf, mehr über Ihre Projekte zu erfahren und wie wir zusammenarbeiten können, um Ihr Unternehmen noch erfolgreicher zu machen. Lassen Sie uns diese spannende Reise gemeinsam beginnen!",
+        "bulbText": "Das Programmieren ist für mich die Verwirklichung eines Traums. Es gibt mir die Möglichkeit, kreative Ideen in die Realität umzusetzen und komplexe Herausforderungen zu meistern. Die ständige Weiterentwicklung und das Erlernen neuer Technologien faszinieren mich und treiben mich an. Es erfüllt mich mit Stolz, aus dem Nichts etwas Wertvolles zu schaffen, das echten Nutzen bringt. Jede Zeile Code bringt mich näher an mein Ziel, innovative und funktionale Lösungen zu entwickeln, die einen spürbaren Unterschied machen.",
+        "puzzleText": "Der Grundstein für meinen Weg zum Programmieren war meine Fähigkeit, komplexe Probleme zu lösen, die mich schon immer begleitet hat. Das Verständnis, wie man große Herausforderungen in handhabbare Teile zerlegt und logisches Denken anwendet, um effektive Lösungen zu entwickeln, hat meine Herangehensweise an das Programmieren grundlegend verändert. Diese Erfahrungen haben es mir ermöglicht, innovative und funktionale Lösungen zu schaffen, die echten Mehrwert bieten."
+    },
+    "skills":{
+        "mySkills": "Meine Skills",
+        "text": "Ich habe meine Fähigkeiten in der Frontend-Entwicklung weiter ausgebaut, was es mir ermöglicht hat, verschiedene reale Projekte zu erstellen.",
+        "getInTouch": "Kontakt Aufnehmen!"
+    },
+    "portfolio":{
+        "subText": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+        "projectOne": "Ein Aufgabenmanager basierend auf dem Kanban-System. Aufgaben können per Drag-and-Drop erstellt und organisiert werden. Weisen Sie dabei Benutzer und Kategorien zu, um den Überblick zu behalten.",
+        "projectTwo": "Ein einfaches Jump-and-Run-Spiel, basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Salsaflaschen zu finden, um gegen das Killer-Huhn zu kämpfen."
+    },
+    "contact":{
+        "contactHeader": "Kontakt",
+        "textOne": "Haben Sie ein Problem zu lösen?",
+        "textTwo": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen zu erfahren und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+        "textThree": "Brauchen Sie einen Frontend-Entwickler?",
+        "textFour": "Kontaktieren Sie mich!",
+        "yourName": "Dein Name ...",
+        "yourEmail": "Deine Email ...",
+        "message": "Deine Nachricht ...",
+        "privacyPolicyOne": "Ich habe die",
+        "privacyPolicyTwo": "Datenschutzrichtlinie",
+        "privacyPolicyThree": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+        "sendMessage": "Nachricht senden",
+        "errorOne": "Ihr Name ist erforderlich",
+        "errorTwo": "Ihre E-Mail ist erforderlich",
+        "errorThree": "Ihre Nachricht ist leer",
+        "errorFour": "Sie müssen der Datenschutzerklärung zustimmen"
+
+    }
+  }

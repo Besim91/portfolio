@@ -1,18 +1,23 @@
 import { Component, inject } from '@angular/core';
-import { ControllService } from './../../controll.service';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ControllService } from './../../controll.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
+  imports: [CommonModule, TranslateModule, HttpClientModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  imports: [CommonModule],
 })
 export class HeaderComponent {
+  translate = inject(TranslateService);
   controll = inject(ControllService);
 
-  constructor() {}
+  switch(event: Event) {
+    this.controll.switchLanguage(event);
+  }
 
   toggleSidebar() {
     this.controll.toggleSidebar();
