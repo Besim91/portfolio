@@ -15,8 +15,8 @@ export class HeaderComponent {
   translate = inject(TranslateService);
   controll = inject(ControllService);
 
-  switch(event: Event) {
-    this.controll.switchLanguage(event);
+  switchLanguage(language: string) {
+    this.controll.switchLanguage(language);
   }
 
   toggleSidebar() {

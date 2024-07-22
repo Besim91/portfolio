@@ -57,9 +57,7 @@ export class ControllService {
     this.translate.use('en');
   }
 
-  switchLanguage(event: Event): void {
-    const language = (event.target as HTMLSelectElement).value;
-
+  switchLanguage(language: string): void {
     if (language && language !== this.selectedLanguage) {
       this.translate.use(language);
       this.selectedLanguage = language;

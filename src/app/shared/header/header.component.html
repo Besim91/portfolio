@@ -19,11 +19,11 @@
             <a href="#portfolio">
                 {{ 'header.portfolio' | translate }}
             </a>
-
-            <select class="translate" (change)="switch($event)">
-                <option value="en">En</option>
-                <option value="de">De</option>
-            </select>
+            <div class="language-switcher">
+                <span (click)="switchLanguage('en')" [class.active]="controll.selectedLanguage === 'en'">EN</span>
+                <span>|</span>
+                <span (click)="switchLanguage('de')" [class.active]="controll.selectedLanguage === 'de'">DE</span>
+            </div>
         </nav>
     </div>
 </header>

@@ -48,10 +48,32 @@ header {
           transition: color 100ms linear;
         }
       }
+
+      .language-switcher {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+
+        span {
+          padding: 0 5px;
+          cursor: pointer;
+
+          &.active {
+            border-bottom: 2px solid rgb(0, 190, 232);
+          }
+        }
+
+        span:hover {
+          color: rgb(0, 190, 232);
+          transition: color 100ms linear;
+        }
+      }
     }
   }
 }
-
 
 @media (max-width: 650px) {
   .links {
