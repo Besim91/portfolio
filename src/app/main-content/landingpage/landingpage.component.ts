@@ -12,7 +12,11 @@ import { ControllService } from './../../controll.service';
 @Component({
   selector: 'app-landingpage',
   templateUrl: './landingpage.component.html',
-  styleUrls: ['./landingpage.component.scss', './responsive.component.scss'],
+  styleUrls: [
+    './landingpage.component.scss',
+    './responsive.component.scss',
+    './responsivegerman.component.scss',
+  ],
   standalone: true,
   imports: [CommonModule, TranslateModule],
 })
@@ -53,13 +57,14 @@ export class LandingpageComponent implements OnInit {
     const link = this.renderer.createElement('link');
     this.renderer.setAttribute(link, 'rel', 'stylesheet');
     this.renderer.setAttribute(link, 'type', 'text/css');
-    this.renderer.setAttribute(
-      link,
-      'href',
+
+    const href =
       language === 'de'
         ? './responsivegerman.component.scss'
-        : './responsive.component.scss'
-    );
+        : './responsive.component.scss';
+
+    console.log(`Setting href for stylesheet: ${href}`); // Debug log
+    this.renderer.setAttribute(link, 'href', href);
     this.renderer.setAttribute(link, 'id', 'dynamic-responsive-style');
     this.renderer.appendChild(head, link);
     console.log(`Stylesheet loaded: ${link.href}`); // Debug log
