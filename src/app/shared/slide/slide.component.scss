@@ -1,14 +1,17 @@
 .sidebar {
   background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  inset: 0;
-  z-index: 999;
-  transform: translateX(100%);
-  transition: transform 100ms ease-in-out;
+  position: fixed; /* Ändert position zu fixed */
+  top: 0; /* Oben auf dem Bildschirm */
+  left: 0; /* Links auf dem Bildschirm */
+  right: 0; /* Rechts auf dem Bildschirm */
+  bottom: 0; /* Unten auf dem Bildschirm */
+  z-index: 999; /* Hoher Z-Index, um sicherzustellen, dass es über allem anderen liegt */
+  transform: translateX(100%); /* Initial außerhalb des Bildschirms */
+  transition: transform 100ms ease-in-out; /* Transition-Effekt */
 }
 
 .sidebar.active {
-  transform: translateX(0);
+  transform: translateX(0); /* Sichtbar machen */
 }
 
 header {
@@ -22,9 +25,10 @@ header {
 
 nav {
   display: flex;
-  flex-direction: row;
+  flex-direction: column; /* Vertikale Anordnung der Links */
   gap: 24px;
   font-size: 20px;
+  align-items: center; /* Zentriert die Links horizontal */
 }
 
 nav > a {
@@ -48,7 +52,7 @@ nav > a {
     position: absolute;
     bottom: -8px;
     left: 0;
-    transition: width 125ms ease-in-out; /* Transition für Erscheinen und Verschwinden */
+    transition: width 125ms ease-in-out;
   }
 
   &:hover::after {
@@ -63,10 +67,12 @@ nav > a {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .name {
   cursor: pointer;
+
   span {
     color: white;
     font-size: 40px;
@@ -75,6 +81,7 @@ nav > a {
     &:nth-child(3) {
       color: rgb(0, 190, 232);
     }
+
     &:nth-child(2) {
       color: rgb(75, 71, 255);
     }

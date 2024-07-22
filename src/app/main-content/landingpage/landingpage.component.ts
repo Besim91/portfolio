@@ -58,10 +58,12 @@ export class LandingpageComponent implements OnInit {
     this.renderer.setAttribute(link, 'rel', 'stylesheet');
     this.renderer.setAttribute(link, 'type', 'text/css');
 
+    // Random number to bypass cache
+    const randomCacheBuster = Math.floor(Math.random() * 10000);
     const href =
       language === 'en'
-        ? './responsive.component.scss'
-        : './responsivegerman.component.scss';
+        ? `./responsive.component.scss?v=${randomCacheBuster}`
+        : `./responsivegerman.component.scss?v=${randomCacheBuster}`;
 
     console.log(`Setting href for stylesheet: ${href}`); // Debug log
     this.renderer.setAttribute(link, 'href', href);
