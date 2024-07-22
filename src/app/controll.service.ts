@@ -10,6 +10,7 @@ export class ControllService {
   sidebarOpen$ = this.sidebarOpenSubject.asObservable();
   isBurgerMenuVisible = true;
   selectedLanguage: string = 'en';
+  languageChangeSubject = new BehaviorSubject<string>(this.selectedLanguage);
 
   images = [
     './../../../assets/img/forms/burger menu.png',
@@ -61,6 +62,8 @@ export class ControllService {
     if (language && language !== this.selectedLanguage) {
       this.translate.use(language);
       this.selectedLanguage = language;
+      this.languageChangeSubject.next(language); // Notify language change
+      console.log(this.selectedLanguage); // Check
     }
   }
 }

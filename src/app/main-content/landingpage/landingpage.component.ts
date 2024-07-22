@@ -1,6 +1,13 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {
+  Component,
+  HostListener,
+  OnInit,
+  Renderer2,
+  inject,
+} from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { ControllService } from './../../controll.service';
 
 @Component({
   selector: 'app-landingpage',
@@ -11,11 +18,17 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class LandingpageComponent implements OnInit {
   currentPixel!: number;
-
-  constructor() {}
+  private document = inject(DOCUMENT);
+  private renderer = inject(Renderer2);
+  private controllService = inject(ControllService);
 
   ngOnInit(): void {
     this.updatePixelWidth();
+    this.loadResponsiveStyles(this.controllService.selectedLanguage);
+    this.controllService.languageChangeSubject.subscribe((language) => {
+      console.log(`Language changed to: ${language}`); // Debug log
+      this.loadResponsiveStyles(language);
+    });
   }
 
   @HostListener('window:resize', ['$event'])
@@ -25,5 +38,30 @@ export class LandingpageComponent implements OnInit {
 
   updatePixelWidth(): void {
     this.currentPixel = window.innerWidth;
+  }
+
+  loadResponsiveStyles(language: string): void {
+    console.log(`Loading responsive styles for language: ${language}`); // Debug log
+    const head = this.document.getElementsByTagName('head')[0];
+    const existingLink = this.document.getElementById(
+      'dynamic-responsive-style'
+    );
+    if (existingLink) {
+      this.renderer.removeChild(head, existingLink);
+    }
+
+    const link = this.renderer.createElement('link');
+    this.renderer.setAttribute(link, 'rel', 'stylesheet');
+    this.renderer.setAttribute(link, 'type', 'text/css');
+    this.renderer.setAttribute(
+      link,
+      'href',
+      language === 'de'
+        ? './responsivegerman.component.scss'
+        : './responsive.component.scss'
+    );
+    this.renderer.setAttribute(link, 'id', 'dynamic-responsive-style');
+    this.renderer.appendChild(head, link);
+    console.log(`Stylesheet loaded: ${link.href}`); // Debug log
   }
 }
