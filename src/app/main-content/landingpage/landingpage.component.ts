@@ -59,14 +59,20 @@ export class LandingpageComponent implements OnInit {
     this.renderer.setAttribute(link, 'type', 'text/css');
 
     const href =
-      language === 'de'
-        ? './responsivegerman.component.scss'
-        : './responsive.component.scss';
+      language === 'en'
+        ? './responsive.component.scss'
+        : './responsivegerman.component.scss';
 
     console.log(`Setting href for stylesheet: ${href}`); // Debug log
     this.renderer.setAttribute(link, 'href', href);
     this.renderer.setAttribute(link, 'id', 'dynamic-responsive-style');
+    this.renderer.listen(link, 'load', () => {
+      console.log(`Stylesheet loaded successfully: ${link.href}`); // Debug log
+    });
+    this.renderer.listen(link, 'error', (event) => {
+      console.error(`Error loading stylesheet: ${link.href}`, event); // Debug log
+    });
     this.renderer.appendChild(head, link);
-    console.log(`Stylesheet loaded: ${link.href}`); // Debug log
+    console.log(`Stylesheet appended: ${link.href}`); // Debug log
   }
 }
