@@ -63,7 +63,7 @@ section {
   font-weight: bold;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .infoBlockEmail {
     flex-direction: column;
   }
@@ -89,10 +89,16 @@ section {
 
   .header span {
     font-size: 60px;
+    padding-left: 12px;
   }
 
   .header {
     gap: 0;
+  }
+
+  .infoBlockEmail div {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
 

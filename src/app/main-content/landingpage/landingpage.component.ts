@@ -12,11 +12,7 @@ import { ControllService } from './../../controll.service';
 @Component({
   selector: 'app-landingpage',
   templateUrl: './landingpage.component.html',
-  styleUrls: [
-    './landingpage.component.scss',
-    './responsive.component.scss',
-    './responsivegerman.component.scss',
-  ],
+  styleUrls: ['./landingpage.component.scss'],
   standalone: true,
   imports: [CommonModule, TranslateModule],
 })
@@ -62,8 +58,8 @@ export class LandingpageComponent implements OnInit {
     const randomCacheBuster = Math.floor(Math.random() * 10000);
     const href =
       language === 'en'
-        ? `./responsive.component.scss?v=${randomCacheBuster}`
-        : `./responsivegerman.component.scss?v=${randomCacheBuster}`;
+        ? `./assets/css/responsive.component.css?v=${randomCacheBuster}`
+        : `./assets/css/responsivegerman.component.css?v=${randomCacheBuster}`;
 
     console.log(`Setting href for stylesheet: ${href}`); // Debug log
     this.renderer.setAttribute(link, 'href', href);

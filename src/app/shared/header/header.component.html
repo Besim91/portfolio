@@ -19,9 +19,9 @@
             <a href="#portfolio">
                 {{ 'header.portfolio' | translate }}
             </a>
-            <div class="language-switcher">
+            <div class="languageSwitcher">
                 <span (click)="switchLanguage('en')" [class.active]="controll.selectedLanguage === 'en'">EN</span>
-                <span>|</span>
+                <span class="divider">|</span>
                 <span (click)="switchLanguage('de')" [class.active]="controll.selectedLanguage === 'de'">DE</span>
             </div>
         </nav>

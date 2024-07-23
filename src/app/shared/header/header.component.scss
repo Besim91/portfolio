@@ -49,7 +49,7 @@ header {
         }
       }
 
-      .language-switcher {
+      .languageSwitcher {
         display: flex;
         align-items: center;
         gap: 5px;
@@ -60,22 +60,30 @@ header {
         span {
           padding: 0 5px;
           cursor: pointer;
+          position: relative;
 
           &.active {
             border-bottom: 2px solid rgb(0, 190, 232);
           }
+
+          &:hover {
+            color: rgb(0, 190, 232);
+            transition: color 100ms linear;
+          }
         }
 
-        span:hover {
-          color: rgb(0, 190, 232);
-          transition: color 100ms linear;
+        .divider {
+          &:hover {
+            color: white;
+            transition: none;
+          }
         }
       }
     }
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
   .links {
     display: none !important;
   }

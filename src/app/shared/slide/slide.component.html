@@ -12,8 +12,19 @@
         </div>
     </header>
     <nav class="links">
-        <a href="">About me</a>
-        <a href="">Skills</a>
-        <a href="">Portfolio</a>
+        <a href="#aboutMe">
+            {{ 'header.aboutMe' | translate }}
+        </a>
+        <a href="#skills">
+            {{ 'header.skills' | translate }}
+        </a>
+        <a href="#portfolio">
+            {{ 'header.portfolio' | translate }}
+        </a>
+        <div class="languageSwitcher">
+            <span (click)="switchLanguage('en')" [class.active]="controll.selectedLanguage === 'en'">EN</span>
+            <span class="divider">|</span>
+            <span (click)="switchLanguage('de')" [class.active]="controll.selectedLanguage === 'de'">DE</span>
+        </div>
     </nav>
 </section>

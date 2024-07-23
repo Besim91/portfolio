@@ -1,17 +1,17 @@
 .sidebar {
   background-color: rgba(0, 0, 0, 0.7);
-  position: fixed; /* Ändert position zu fixed */
-  top: 0; /* Oben auf dem Bildschirm */
-  left: 0; /* Links auf dem Bildschirm */
-  right: 0; /* Rechts auf dem Bildschirm */
-  bottom: 0; /* Unten auf dem Bildschirm */
-  z-index: 999; /* Hoher Z-Index, um sicherzustellen, dass es über allem anderen liegt */
-  transform: translateX(100%); /* Initial außerhalb des Bildschirms */
-  transition: transform 100ms ease-in-out; /* Transition-Effekt */
-}
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 100ms ease-in-out;
 
-.sidebar.active {
-  transform: translateX(0); /* Sichtbar machen */
+  &.active {
+    transform: translateX(0);
+  }
 }
 
 header {
@@ -25,38 +25,38 @@ header {
 
 nav {
   display: flex;
-  flex-direction: column; /* Vertikale Anordnung der Links */
+  flex-direction: column;
   gap: 24px;
   font-size: 20px;
-  align-items: center; /* Zentriert die Links horizontal */
-}
+  align-items: center;
 
-nav > a {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  position: relative;
-
-  &:hover {
-    color: rgb(0, 190, 232);
-    transition: color 100ms linear;
+  a {
     text-decoration: none;
-  }
+    color: white;
+    cursor: pointer;
+    position: relative;
 
-  &::after {
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 3px;
-    background: rgb(75, 71, 255);
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    transition: width 125ms ease-in-out;
-  }
+    &:hover {
+      color: rgb(0, 190, 232);
+      transition: color 100ms linear;
+      text-decoration: none;
+    }
 
-  &:hover::after {
-    width: 50%;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 3px;
+      background: rgb(75, 71, 255);
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      transition: width 125ms ease-in-out;
+    }
+
+    &:hover::after {
+      width: 50%;
+    }
   }
 }
 
@@ -99,4 +99,35 @@ nav > a {
 .burgerMenu {
   z-index: 999 !important;
   cursor: pointer;
+}
+
+.languageSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+
+  span {
+    padding: 0 5px;
+    cursor: pointer;
+    position: relative;
+
+    &.active {
+      border-bottom: 2px solid rgb(0, 190, 232);
+    }
+
+    &:hover {
+      color: rgb(0, 190, 232);
+      transition: color 100ms linear;
+    }
+  }
+
+  .divider {
+    &:hover {
+      color: white;
+      transition: none;
+    }
+  }
 }

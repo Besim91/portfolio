@@ -4,9 +4,9 @@
   position: relative;
   height: 100px;
   top: 158px;
-  font-size: 88px;
+  font-size: 38px;
   white-space: nowrap;
-  color: rgb(215, 27, 27);
+  color: white;
   margin-right: -74px;
 }
 
@@ -15,46 +15,55 @@
     top: 170px !important;
   }
 }
+
 @media (max-width: 1750px) {
   .form {
     top: 190px !important;
   }
 }
+
 @media (max-width: 1700px) {
   .form {
     top: 210px !important;
   }
 }
+
 @media (max-width: 1650px) {
   .form {
     top: 230px !important;
   }
 }
+
 @media (max-width: 1600px) {
   .form {
     top: 250px !important;
   }
 }
+
 @media (max-width: 1550px) {
   .form {
     top: 270px !important;
   }
 }
+
 @media (max-width: 1500px) {
   .form {
     top: 290px !important;
   }
 }
+
 @media (max-width: 1450px) {
   .form {
     top: 310px !important;
   }
 }
+
 @media (max-width: 1400px) {
   .form {
     top: 330px !important;
   }
 }
+
 @media (max-width: 1350px) {
   .form {
     top: 350px !important;
@@ -63,36 +72,41 @@
 
 @media (max-width: 1300px) {
   #container {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column !important;
+    align-items: center !important;
     justify-content: flex-start !important;
   }
 
   .textContainer {
-    justify-content: center;
-    width: 100%;
+    justify-content: center !important;
+    width: 100% !important;
     padding-top: 30px !important;
   }
 
   .photoParentDiv {
-    width: 400px;
+    width: 400px !important;
     flex: unset !important;
   }
 
   .photoLandingpage {
-    width: 100%;
-    padding-top: 20px;
+    width: 100% !important;
+    padding-top: 20px !important;
   }
 
   .backgroundForm {
-    width: 200%;
+    width: 200% !important;
   }
+
   .parentTextContainer {
-    padding-right: 0;
+    padding-right: 0 !important;
   }
 
   .form {
-    top: 300px !important;
+    top: 400px !important;
+  }
+
+  .fd {
+    font-size: 60px;
   }
 }
 
@@ -108,8 +122,7 @@
   }
 
   .iAm {
-    top: 154px !important;
-    font-size: 54px !important;
+    margin-right: -68px !important;
   }
 
   .form {
@@ -133,8 +146,9 @@
   }
 
   .iAm {
-    top: 142px !important;
-    font-size: 50px !important;
+    top: 146px !important;
+    font-size: 35px !important;
+    margin-right: -66px !important;
   }
 
   .form {
@@ -154,12 +168,13 @@
   }
 
   .fd {
-    font-size: 52px !important;
+    font-size: 53px !important;
   }
 
   .iAm {
-    top: 130px !important;
-    font-size: 46px !important;
+    top: 133px !important;
+    font-size: 33px !important;
+    margin-right: -58px !important;
   }
 
   .form {
@@ -203,12 +218,13 @@
   }
 
   .fd {
-    font-size: 48px !important;
+    font-size: 49px !important;
   }
 
   .iAm {
-    top: 115px !important;
-    font-size: 41px !important;
+    top: 127px !important;
+    font-size: 31px !important;
+    margin-right: -54px !important;
   }
 
   #textBox {
@@ -226,18 +242,22 @@
   }
 
   .maxWidth {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
   }
 
   .lineLeftInside {
-    width: 5%;
+    width: 5% !important;
+  }
+
+  .backgroundForm {
+    width: 750px !important;
   }
 }
 
 @media (max-width: 600px) {
   .photoParentDiv {
-    width: 350px;
+    width: 350px !important;
   }
 
   .bm {
@@ -245,12 +265,13 @@
   }
 
   .fd {
-    font-size: 44px !important;
+    font-size: 45px !important;
   }
 
   .iAm {
-    top: 110px !important;
-    font-size: 40px !important;
+    top: 120px !important;
+    font-size: 29px !important;
+    margin-right: -61px !important;
   }
 
   .textContainer {
@@ -272,12 +293,13 @@
   }
 
   .fd {
-    font-size: 37px !important;
+    font-size: 38px !important;
   }
 
   .iAm {
-    top: 93px !important;
-    font-size: 33px !important;
+    top: 98px !important;
+    font-size: 25px !important;
+    margin-right: -56px !important;
   }
 
   #textBox {
@@ -299,12 +321,13 @@
   }
 
   .iAm {
-    top: 83px !important;
-    font-size: 29px !important;
+    top: 87px !important;
+    font-size: 21px !important;
+    margin-right: -51px !important;
   }
 
   button {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 }
 
@@ -314,7 +337,7 @@
   }
 
   .form {
-    top: 450px;
+    top: 450px !important;
   }
 
   .bm {
@@ -326,8 +349,9 @@
   }
 
   .iAm {
-    top: 72px !important;
-    font-size: 25px !important;
+    top: 77px !important;
+    font-size: 18px !important;
+    margin-right: -52px !important;
   }
 
   .textContainer {
@@ -338,23 +362,24 @@
     gap: 12px !important;
   }
 
-  .form {
-    top: 410px !important;
+  .backgroundForm {
+    width: 550px !important;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 360px) {
   .bm {
     font-size: 35px !important;
   }
 
   .fd {
-    font-size: 27px !important;
+    font-size: 26px !important;
   }
 
   .iAm {
-    top: 65px !important;
-    font-size: 23px !important;
+    top: 67px !important;
+    font-size: 17px !important;
+    margin-right: -50px !important;
   }
 
   #textBox {
@@ -366,6 +391,6 @@
   }
 
   button {
-    font-size: 14px;
+    font-size: 14px !important;
   }
 }
