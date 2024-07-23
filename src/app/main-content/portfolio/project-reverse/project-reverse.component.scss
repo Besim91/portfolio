@@ -1,18 +1,13 @@
+@import "./../../../../styles.scss";
+
 :host {
   position: relative;
   max-width: 1990px;
-    width: 100%;
-}
-
-@mixin alignement($direction, $positionX, $positionY) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $positionX;
-  align-items: $positionY;
+  width: 100%;
 }
 
 .infoBlock {
-  @include alignement(column, center, flex-start);
+  @include flexPosition(center, flex-start, column);
   gap: 32px;
   width: 520px;
 
@@ -27,7 +22,7 @@ img {
 }
 
 .projectBlock {
-  @include alignement(row-reverse, center, center);
+  @include flexPosition(row-reverse, center, center);
   padding-top: 100px;
   padding-bottom: 100px;
   gap: 100px;
@@ -38,11 +33,11 @@ img {
 .title {
   font-size: 32px;
   font-weight: bold;
-  color: rgb(75, 71, 255);
+  color: $midBlue;
 }
 
 .skills {
-  color: rgb(0, 190, 232);
+  color: $babyBlue;
   font-size: 24px;
 }
 
@@ -53,7 +48,7 @@ img {
   outline: none;
   border: none;
   color: white;
-  background-color: rgb(75, 71, 255);
+  background-color: $midBlue;
   font-size: 20px;
   cursor: pointer;
   transition: background-color 0.1s ease;
@@ -64,7 +59,7 @@ img {
   align-items: center;
 
   &:hover {
-    background-color: rgb(0, 190, 232);
+    background-color: $babyBlue;
     transition: background-color 125ms ease;
   }
 }
@@ -72,7 +67,7 @@ img {
 .groupSix {
   position: absolute;
   right: 0;
-  width: 400px;
+  width: 300px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
@@ -83,7 +78,7 @@ img {
   height: 58px;
   border-radius: 10px;
   outline: none;
-  border: solid 2px rgb(0, 190, 232);
+  border: solid 2px $babyBlue;
   color: white;
   background-color: transparent;
   font-size: 20px;
@@ -96,7 +91,7 @@ img {
   align-items: center;
 
   &:hover {
-    background-color: rgb(0, 190, 232);
+    background-color: $babyBlue;
     transition: background-color 125ms ease;
   }
 }

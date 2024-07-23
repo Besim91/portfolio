@@ -1,14 +1,16 @@
+@import "./../../../styles.scss";
+
 :host {
   display: flex;
   justify-content: center;
 }
 
 section {
-  background-color: rgb(20, 29, 47);
+  background-color: $darkBlue;
   width: 100%;
   max-width: 1990px;
   display: flex;
-  justify-content: center;
+  @include flexPosition(center, center, row);
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -17,8 +19,7 @@ section {
   position: relative;
   z-index: 10;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include flexPosition(space-between, center, row);
 
   span {
     color: white;
@@ -37,23 +38,22 @@ button {
   outline: none;
   border: none;
   color: white;
-  background-color: rgb(0, 190, 232);
+  background-color: $babyBlue;
   font-size: 20px;
   cursor: pointer;
   transition: width 0.1s ease, height 0.1s ease, background-color 0.1s ease;
   z-index: 3;
 
   &:hover {
-    background-color: rgb(75, 71, 255);
+    background-color: $midBlue;
     width: calc(200px + 10px);
     height: calc(58px + 10px);
   }
 }
 
 .skillsText {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; 
+  @include flexPosition(center, center, column);
   gap: 50px;
   width: 100%;
 }
@@ -74,7 +74,7 @@ button {
 .lineRightInside {
   height: 4px;
   width: 100px;
-  background-color: rgb(75, 71, 255);
+  background-color: $midBlue;
 }
 
 .lineRightTransparent {
@@ -86,14 +86,14 @@ button {
 .skillsTextHeader {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  @include flexPosition(flex-start, center, row);
   gap: 16px;
 }
 
 app-icons {
   color: white;
   display: flex;
+  @include flexPosition(flex-start, center, row);
   flex-wrap: wrap;
   width: 100%;
   gap: 50px;
@@ -152,8 +152,8 @@ app-icons {
   }
 
   .skills {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    @include flexPosition(center, center, column);
     gap: 64px;
   }
 
@@ -167,7 +167,7 @@ app-icons {
     margin-left: 0;
   }
 
-  button {
+  a {
     order: 3;
   }
 
@@ -179,6 +179,7 @@ app-icons {
     padding-left: 5%;
     padding-right: 5%;
   }
+
   .lineRightInside {
     width: 5%;
   }

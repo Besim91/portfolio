@@ -1,19 +1,16 @@
-footer {
-  background-color: rgb(20, 29, 47);
+@import "./../../../styles.scss";
 
+footer {
+  background-color: $darkBlue;
   height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexPosition(center, center, row);
   position: relative;
   z-index: 10;
 }
 
 .subFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: solid 2px rgb(0, 190, 232);
+  @include flexPosition(space-between, center, row);
+  border-top: solid 2px $babyBlue;
   height: 100%;
 }
 
@@ -30,10 +27,10 @@ footer {
     line-height: 1;
 
     &:nth-child(3) {
-      color: rgb(0, 190, 232);
+      color: $babyBlue;
     }
     &:nth-child(2) {
-      color: rgb(75, 71, 255);
+      color: $midBlue;
     }
   }
 }
@@ -50,7 +47,7 @@ footer {
     display: inline-block;
     width: 0;
     height: 3px;
-    background: rgb(0, 190, 232);
+    background: $babyBlue;
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -67,8 +64,7 @@ footer {
 }
 
 .nameImprint {
-  display: flex;
-  flex-direction: column;
+  @include flexPosition(center, unset, column);
 }
 
 .copyright {
@@ -77,7 +73,7 @@ footer {
 }
 
 nav {
-  display: flex;
+  @include flexPosition(unset, center, row);
   gap: 24px;
 
   img {
@@ -86,8 +82,7 @@ nav {
   }
 
   a {
-    display: flex;
-    align-items: center;
+    @include flexPosition(center, unset, row);
     transition: all 125ms ease-in-out;
 
     &:hover {
@@ -105,11 +100,12 @@ nav {
 
 @media (max-width: 700px) {
   .subFooter {
-    flex-direction: column;
+    @include flexPosition(center, center, column);
     padding-top: 24px;
     padding-bottom: 24px;
     padding-left: 0;
     padding-right: 0;
+    gap: 28px !important;
   }
 
   .imprint {

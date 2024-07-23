@@ -1,34 +1,27 @@
-
-
-@mixin alignement($direction) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: center;
-  align-items: center;
-}
+@import "./../../../styles.scss";
 
 section {
   width: 100%;
-  background-color: rgb(20, 29, 47);
+  background-color: $darkBlue;
   color: white;
 
-  @include alignement(column);
+  @include flexPosition(center, center, column);
 
   span {
-    @include alignement(row);
+    @include flexPosition(center, center, row);
   }
 }
 
 .lineLeft {
   height: 4px;
   width: 10%;
-  background-color: rgb(75, 71, 255);
+  background-color: $midBlue;
 }
 
 .lineRight {
   height: 4px;
   width: 30%;
-  background-color: rgb(75, 71, 255);
+  background-color: $midBlue;
 }
 
 .lineLeftEmpty {
@@ -37,7 +30,7 @@ section {
 
 .headlinePortfolio {
   height: 110px;
-  @include alignement(row);
+  @include flexPosition(center, center, row);
   gap: 16px;
   padding-left: 0;
   padding-right: 0;
@@ -54,10 +47,6 @@ section {
   position: relative;
   z-index: 10;
 }
-
-
-
-
 
 app-project {
   z-index: 11;

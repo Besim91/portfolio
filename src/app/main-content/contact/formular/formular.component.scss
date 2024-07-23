@@ -1,3 +1,5 @@
+@import "./../../../../styles.scss";
+
 .container {
   width: 100%;
   background-color: transparent;
@@ -6,8 +8,7 @@
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+  @include flexPosition(unset, unset, column);
   gap: 12px;
 }
 
@@ -21,12 +22,12 @@ select,
 textarea {
   width: 100%;
   padding: 12px;
-  padding-right: 40px; /* Platz für das Bild */
-  border: 1px solid rgb(75, 71, 255);
+  padding-right: 40px;
+  border: 1px solid $midBlue;
   border-radius: 10px;
   box-sizing: border-box;
   resize: vertical;
-  background-color: rgb(20, 29, 47);
+  background-color: $darkBlue;
   color: white;
   outline: none;
 }
@@ -36,9 +37,9 @@ textarea {
   right: 10px;
   top: 23px;
   transform: translateY(-50%);
-  width: 24px; /* Bildgröße anpassen */
-  height: 24px; /* Bildgröße anpassen */
-  pointer-events: none; /* Verhindert, dass das Bild die Interaktionen mit dem Eingabefeld blockiert */
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
 }
 
 .inputValid {
@@ -46,23 +47,23 @@ textarea {
   right: 10px;
   top: 23px;
   transform: translateY(-50%);
-  width: 24px; /* Bildgröße anpassen */
-  height: 24px; /* Bildgröße anpassen */
-  pointer-events: none; /* Verhindert, dass das Bild die Interaktionen mit dem Eingabefeld blockiert */
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
 }
 
 input[type="text"]:hover,
 input[type="email"]:hover,
 select:hover,
 textarea:hover {
-  border-color: rgb(0, 190, 232);
+  border-color: $babyBlue;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 select:focus,
 textarea:focus {
-  background-color: rgb(20, 29, 47) !important;
+  background-color: $darkBlue !important;
   color: white !important;
 }
 
@@ -84,8 +85,7 @@ input[type="submit"] {
 }
 
 .privacy-policy {
-  display: flex;
-  align-items: center;
+  @include flexPosition(unset, center, row);
   height: 80px;
   gap: 16px;
 }
@@ -94,7 +94,7 @@ input[type="submit"] {
   appearance: none;
   width: 20px;
   height: 20px;
-  border: 2px solid rgb(0, 190, 232);
+  border: 2px solid $babyBlue;
   border-radius: 3px;
   position: relative;
   outline: none;
@@ -105,12 +105,12 @@ input[type="submit"] {
 
 .privacy-policy input[type="checkbox"]:checked {
   background-color: transparent;
-  border-color: rgb(0, 190, 232);
+  border-color: $babyBlue;
 }
 
 .privacy-policy input[type="checkbox"]:checked::after {
   content: "✔";
-  color: rgb(0, 190, 232);
+  color: $babyBlue;
   font-size: 16px;
   position: absolute;
   top: -2px;
@@ -122,7 +122,7 @@ input[type="submit"] {
 }
 
 .privacy-policy a {
-  color: rgb(75, 71, 255);
+  color: $midBlue;
 }
 
 .privacy-policy a:hover {
@@ -143,19 +143,17 @@ input[type="submit"] {
 }
 
 .babyBlue {
-  background-color: rgb(0, 190, 232) !important;
+  background-color: $babyBlue !important;
 }
 
 .subDiv {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  @include flexPosition(center, unset, row);
 }
 
 .goUp {
   width: 100%;
-  display: flex;
-  justify-content: flex-end;
+  @include flexPosition(flex-end, unset, row);
   padding-top: 50px;
 
   a {

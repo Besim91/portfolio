@@ -21,6 +21,17 @@ body {
   padding-right: 100px;
 }
 
+@mixin flexPosition($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+$darkBlue: rgb(20, 29, 47);
+$midBlue: rgb(75, 71, 255);
+$babyBlue: rgb(0, 190, 232);
+
 /* poppins-100 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */

@@ -1,27 +1,25 @@
+@import "./../../../styles.scss";
+
 :host {
-  display: flex;
-  justify-content: center;
+  @include flexPosition(center, unset, row);
 }
 
 section {
   width: 100%;
   max-width: 1990px;
-  background-color: rgb(20, 29, 47);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  background-color: $darkBlue;
+  @include flexPosition(center, center, column);
   position: relative;
 }
 
 .lineLeftInside {
   height: 4px;
   width: 84px;
-  background-color: rgb(75, 71, 255);
+  background-color: $midBlue;
 }
+
 .header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  @include flexPosition(unset, center, row);
   gap: 16px;
   position: relative;
   z-index: 10;
@@ -36,16 +34,14 @@ section {
 }
 
 .infoBlockEmail {
-  display: flex;
-  justify-content: space-between;
+  @include flexPosition(space-between, unset, row);
   color: white;
   gap: 32px;
   position: relative;
   z-index: 10;
 
   div {
-    display: flex;
-    flex-direction: column;
+    @include flexPosition(unset, unset, column);
     gap: 16px;
   }
 }
@@ -65,7 +61,7 @@ section {
 
 @media (max-width: 1200px) {
   .infoBlockEmail {
-    flex-direction: column;
+    @include flexPosition(center, unset, column);
   }
 
   .header span {

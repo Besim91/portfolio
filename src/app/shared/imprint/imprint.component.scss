@@ -1,11 +1,12 @@
+@import "./../../../styles.scss";
+
 :host {
-  display: flex;
-  justify-content: center;
+  @include flexPosition(center, unset, row);
   height: calc(100vh - 300px);
 }
 
 section {
-  background-color: rgb(20, 29, 47);
+  background-color: $darkBlue;
   position: relative;
   z-index: 10;
   color: white;
@@ -13,21 +14,17 @@ section {
   padding-bottom: 50px;
 
   a {
-    color: #4b47ff;
+    color: $midBlue;
   }
 }
 
 .im {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  @include flexPosition(space-between, center, row);
 }
 
 .goBack {
   width: 100%;
-  display: flex;
-  justify-content: flex-end;
+  @include flexPosition(flex-end, unset, row);
 
   a {
     img {
