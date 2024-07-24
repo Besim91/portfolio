@@ -31,7 +31,8 @@ section {
   }
 }
 
-button {
+.styledLink {
+  display: inline-block;
   width: 200px;
   height: 58px;
   border-radius: 10px;
@@ -40,19 +41,22 @@ button {
   color: white;
   background-color: $babyBlue;
   font-size: 20px;
+  text-align: center;
+  line-height: 58px;
   cursor: pointer;
-  transition: width 0.1s ease, height 0.1s ease, background-color 0.1s ease;
+  transition: transform 0.125s ease, background-color 0.1s ease;
   z-index: 3;
+  text-decoration: none;
+  filter: drop-shadow(0 0 3px $darkBlue);
 
   &:hover {
+    transform: scale(1.1);
     background-color: $midBlue;
-    width: calc(200px + 10px);
-    height: calc(58px + 10px);
   }
 }
 
 .skillsText {
-  display: flex; 
+  display: flex;
   @include flexPosition(center, center, column);
   gap: 50px;
   width: 100%;

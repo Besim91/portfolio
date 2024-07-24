@@ -29,7 +29,7 @@ export class ControllService {
     { img: '/assets/img/icons/css.png', title: 'CSS' },
     { img: '/assets/img/icons/api.png', title: 'Rest-Api' },
     { img: '/assets/img/icons/scrum.png', title: 'Scrum' },
-    { img: '/assets/img/icons/material.png', title: 'Material design' },
+    { img: '/assets/img/icons/material.png', title: 'Material Design' },
   ];
 
   constructor(private translate: TranslateService) {}
@@ -38,6 +38,15 @@ export class ControllService {
     this.sidebarOpenSubject.next(!this.sidebarOpenSubject.value);
     this.loadBurgerMenuImages();
     this.isBurgerMenuVisible = !this.isBurgerMenuVisible;
+    this.toggleBodyScroll(!this.isBurgerMenuVisible);
+  }
+
+  toggleBodyScroll(disable: boolean) {
+    if (disable) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
   }
 
   loadBurgerMenuImages() {

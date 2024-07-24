@@ -10,8 +10,8 @@
                 <span class="infoSkills">{{ 'skills.text' | translate }}</span>
                 <div class="lineRightTransparent"></div>
             </div>
-            <a href="#contact"><button *ngIf="currentPixel >= 860">{{ 'skills.getInTouch' | translate }}</button></a>
+            <a href="#contact" class="styledLink" *ngIf="currentPixel >= 860">{{ 'skills.getInTouch' | translate }}</a>
         </div>
-        <a href="#contact"><button *ngIf="currentPixel < 860">{{ 'skills.getInTouch' | translate }}</button></a>
+        <a href="#contact" class="styledLink" *ngIf="currentPixel < 860">{{ 'skills.getInTouch' | translate }}</a>
     </div>
 </section>

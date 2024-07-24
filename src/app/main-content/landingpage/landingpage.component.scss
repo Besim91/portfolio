@@ -4,6 +4,7 @@ section {
   background-color: $darkBlue;
   @include flexPosition(center, center, column);
   position: relative;
+  margin-top: 100px;
 }
 
 #container {
@@ -39,6 +40,7 @@ section {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  filter: drop-shadow(0 0 3px $darkBlue);
 }
 
 .backgroundForm {
@@ -75,8 +77,9 @@ section {
   padding-bottom: 30px;
 }
 
-button {
-  width: 30%;
+.styledLink {
+  display: inline-block;
+  width: 200px;
   height: 58px;
   border-radius: 10px;
   outline: none;
@@ -84,14 +87,17 @@ button {
   color: white;
   background-color: $babyBlue;
   font-size: 20px;
+  text-align: center;
+  line-height: 58px;
   cursor: pointer;
-  transition: width 0.1s ease, height 0.1s ease, background-color 0.1s ease;
+  transition: transform 0.125s ease, background-color 0.1s ease;
   z-index: 3;
+  text-decoration: none;
+  filter: drop-shadow(0 0 3px $darkBlue);
 
   &:hover {
+    transform: scale(1.1);
     background-color: $midBlue;
-    width: calc(30% + 10px);
-    height: calc(58px + 10px);
   }
 }
 
@@ -124,6 +130,7 @@ footer {
       &:hover img {
         transform: scale(1.3);
         transition: transform 125ms ease-in-out;
+        filter: drop-shadow(0 0 1px whitesmoke);
       }
     }
   }

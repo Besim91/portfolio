@@ -32,7 +32,7 @@
                 <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" id="checkbox" name="checkbox" required>
             </div>
 
-            <span>{{'contact.privacyPolicyOne' | translate}} <a href="privacyPolicy">{{'contact.privacyPolicyTwo' | translate}}</a>
+            <span>{{'contact.privacyPolicyOne' | translate}} <a class="ppLink" href="privacyPolicy">{{'contact.privacyPolicyTwo' | translate}}</a>
                 {{'contact.privacyPolicyThree' | translate}}</span>
         </div>
 
@@ -42,5 +42,10 @@
                    [class.babyBlue]="contactForm.form.valid && contactData.checkbox">
         </div>
     </form>
+
+    <div *ngIf="submissionSuccess" class="successMessage">
+        {{'contact.successMessage' | translate}}
+    </div>
+
     <div class="goUp"><a href="#header"><img src="./../../../../assets/img/forms/goup.png"></a></div>
 </div>

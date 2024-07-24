@@ -19,10 +19,11 @@
 
 img {
   width: 400px;
+  filter: drop-shadow(0 0 3px $darkBlue);
 }
 
 .projectBlock {
-  @include flexPosition(row-reverse, center, center);
+  @include flexPosition(center, center, row);
   padding-top: 100px;
   padding-bottom: 100px;
   gap: 100px;
@@ -57,6 +58,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 0px 6px 1px $darkBlue;
 
   &:hover {
     background-color: $babyBlue;
@@ -66,9 +68,9 @@ img {
 
 .groupSix {
   position: absolute;
-  right: 0;
-  width: 300px;
-  top: 50%;
+  right: -80px;
+  width: 400px;
+  top: 70%;
   transform: translateY(-50%);
   z-index: 10;
 }
@@ -80,7 +82,7 @@ img {
   outline: none;
   border: solid 2px $babyBlue;
   color: white;
-  background-color: transparent;
+  background-color: $darkBlue;
   font-size: 20px;
   cursor: pointer;
   transition: background-color 0.1s ease;
@@ -89,6 +91,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 0px 6px 1px $darkBlue;
 
   &:hover {
     background-color: $babyBlue;

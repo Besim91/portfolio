@@ -22,6 +22,7 @@ export class FormularComponent {
   };
 
   mailTest = false;
+  submissionSuccess = false;
 
   post = {
     endPoint: 'https://besimmustafi.com/sendMail.php',
@@ -40,8 +41,12 @@ export class FormularComponent {
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            // hier weiter aktionen ausführen
+            this.submissionSuccess = true;
             ngForm.resetForm();
+
+            setTimeout(() => {
+              this.submissionSuccess = false;
+            }, 5000);
           },
           error: (error) => {
             console.error(error);

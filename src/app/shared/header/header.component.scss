@@ -18,6 +18,7 @@ header {
 
     .name {
       cursor: pointer;
+      text-decoration: none;
       @include flexPosition(unset, center, row);
 
       span {

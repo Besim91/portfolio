@@ -12,17 +12,17 @@
         </div>
     </header>
     <nav class="links">
-        <a href="#aboutMe">
+        <a href="#aboutMe" (click)="this.controll.toggleSidebar()">
             {{ 'header.aboutMe' | translate }}
         </a>
-        <a href="#skills">
+        <a href="#skills" (click)="this.controll.toggleSidebar()">
             {{ 'header.skills' | translate }}
         </a>
-        <a href="#portfolio">
+        <a href="#portfolio" (click)="this.controll.toggleSidebar()">
             {{ 'header.portfolio' | translate }}
         </a>
         <div class="languageSwitcher">
-            <span (click)="switchLanguage('en')" [class.active]="controll.selectedLanguage === 'en'">EN</span>
+            <span (click)="switchLanguage('en') " [class.active]="controll.selectedLanguage === 'en'">EN</span>
             <span class="divider">|</span>
             <span (click)="switchLanguage('de')" [class.active]="controll.selectedLanguage === 'de'">DE</span>
         </div>

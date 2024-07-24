@@ -30,6 +30,7 @@
 
   img:hover {
     transform: scale(1.2);
+    filter: drop-shadow(0 0 16px whitesmoke);
   }
 }
 
@@ -62,5 +63,14 @@
 @media (max-width: 500px) {
   .title {
     font-size: 45px !important;
+  }
+
+  .info {
+    @include flexPosition(unset, center, column);
+    gap: 16px;
+  }
+
+  .info img {
+    padding-top: 16px;
   }
 }

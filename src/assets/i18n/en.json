@@ -41,11 +41,14 @@
       "errorOne": "Your name is required",
       "errorTwo": "Your email is required",
       "errorThree": "Your message is empty",
-      "errorFour": "You must agree to the privacy policy"
+      "errorFour": "You must agree to the privacy policy",
+      "successMessage": "Your message has been sent successfully!"
+
     },
     "imprint": {
       "contact": "Contact",
-      "mobile": "Mobile:"
+      "mobile": "Mobile:",
+      "imp": "Imprint"
     },
     "privacyPolicy": {
       "title": "Privacy Policy",

@@ -19,7 +19,7 @@
     "skills":{
         "mySkills": "Meine Skills",
         "text": "Ich habe meine Fähigkeiten in der Frontend-Entwicklung weiter ausgebaut, was es mir ermöglicht hat, verschiedene reale Projekte zu erstellen.",
-        "getInTouch": "Kontakt Aufnehmen!"
+        "getInTouch": "Kontakt"
     },
     "portfolio":{
         "subText": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
@@ -42,12 +42,15 @@
         "errorOne": "Ihr Name ist erforderlich",
         "errorTwo": "Ihre E-Mail ist erforderlich",
         "errorThree": "Ihre Nachricht ist leer",
-        "errorFour": "Sie müssen der Datenschutzerklärung zustimmen"
+        "errorFour": "Sie müssen der Datenschutzerklärung zustimmen",
+        "successMessage": "Ihre Nachricht wurde erfolgreich gesendet!"
 
     },
     "imprint": {
         "contact": "Kontakt",
-        "mobile": "Telefon:"
+        "mobile": "Telefon:",
+        "imp": "Impressum"
+
 
     },
     "privacyPolicy": {

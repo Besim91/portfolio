@@ -2,7 +2,6 @@
 
 :host {
   @include flexPosition(center, unset, row);
-  height: calc(100vh - 300px);
 }
 
 section {
@@ -12,6 +11,9 @@ section {
   color: white;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-top: 100px;
+  height: calc(100vh - 300px);
+  @include flexPosition(flex-start, unset, column);
 
   a {
     color: $midBlue;
@@ -43,12 +45,24 @@ section {
 }
 
 @media (max-width: 700px) {
-  :host {
-    height: calc(100vh - 350px);
+  section {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  section {
+    @include flexPosition(flex-start, center, column);
   }
 
-  section {
-    padding-left: 5%;
-    padding-right: 5%;
+  a img {
+    position: absolute;
+    right: 5%;
+    top: 68px;
+  }
+
+  p {
+    text-align: center;
   }
 }
