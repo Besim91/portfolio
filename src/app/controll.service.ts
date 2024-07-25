@@ -75,4 +75,8 @@ export class ControllService {
       console.log(this.selectedLanguage); // Check
     }
   }
+
+  linkToTop() {
+    window.scroll(0, 0);
+  }
 }

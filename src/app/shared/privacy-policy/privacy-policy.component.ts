@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { ControllService } from './../../controll.service';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -8,4 +9,6 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss',
 })
-export class PrivacyPolicyComponent {}
+export class PrivacyPolicyComponent {
+  controll = inject(ControllService);
+}

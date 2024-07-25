@@ -3,6 +3,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
+import { ControllService } from './../../../controll.service';
 
 @Component({
   selector: 'app-formular',
@@ -13,6 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class FormularComponent {
   http = inject(HttpClient); // In der app.config muss der Provider dazu eingefügt werden
+  controll = inject(ControllService);
 
   contactData = {
     name: '',

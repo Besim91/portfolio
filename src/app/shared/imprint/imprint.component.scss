@@ -17,6 +17,11 @@ section {
 
   a {
     color: $midBlue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

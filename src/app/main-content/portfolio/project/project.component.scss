@@ -20,6 +20,12 @@
 img {
   width: 400px;
   filter: drop-shadow(0 0 3px $darkBlue);
+  transition: all 125ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 125ms ease-in-out;
+  }
 }
 
 .projectBlock {

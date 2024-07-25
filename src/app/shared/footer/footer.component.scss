@@ -6,11 +6,11 @@ footer {
   @include flexPosition(center, center, row);
   position: relative;
   z-index: 10;
+  border-top: solid 2px $babyBlue;
 }
 
 .subFooter {
   @include flexPosition(space-between, center, row);
-  border-top: solid 2px $babyBlue;
   height: 100%;
 }
 
@@ -51,7 +51,7 @@ footer {
     position: absolute;
     bottom: -5px;
     left: 0;
-    transition: width 125ms ease-in-out; /* Transition für Erscheinen und Verschwinden */
+    transition: width 125ms ease-in-out;
   }
 
   &:hover::after {
@@ -111,6 +111,10 @@ nav {
 
   .imprint {
     padding-top: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .copyright {

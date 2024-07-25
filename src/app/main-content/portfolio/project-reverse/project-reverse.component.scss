@@ -20,6 +20,12 @@
 img {
   width: 400px;
   filter: drop-shadow(0 0 3px $darkBlue);
+  transition: all 125ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 125ms ease-in-out;
+  }
 }
 
 .projectBlock {
@@ -71,8 +77,8 @@ img {
   right: -80px;
   width: 400px;
   top: 70%;
-  transform: translateY(-50%);
   z-index: 10;
+  transform: none !important;
 }
 
 .gitHub {
@@ -107,6 +113,7 @@ img {
 
   .infoBlock {
     align-items: center;
+    order: 2 !important;
   }
 
   .description {
