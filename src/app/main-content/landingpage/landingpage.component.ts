@@ -23,12 +23,23 @@ export class LandingpageComponent implements OnInit {
   private controllService = inject(ControllService);
 
   ngOnInit(): void {
-    this.updatePixelWidth();
+    setTimeout(() => {
+      this.updatePixelWidth();
+    }, 200);
     this.loadResponsiveStyles(this.controllService.selectedLanguage);
     this.controllService.languageChangeSubject.subscribe((language) => {
-      console.log(`Language changed to: ${language}`); // Debug log
       this.loadResponsiveStyles(language);
     });
+  }
+
+  // ngAfterViewInit(): void {
+  //   this.updatePixelWidth();
+  // }
+
+  constructor() {
+    setTimeout(() => {
+      this.updatePixelWidth();
+    }, 200);
   }
 
   @HostListener('window:resize', ['$event'])

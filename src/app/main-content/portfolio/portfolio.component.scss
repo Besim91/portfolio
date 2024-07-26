@@ -28,19 +28,46 @@ section {
   flex-grow: 1;
 }
 
+.lineOutsideRight {
+  flex-grow: 1;
+  background-color: $midBlue;
+  height: 4px;
+  z-index: 11;
+}
+
+.lineOutsideRight {
+  height: 4px;
+  flex-grow: 1;
+  background-color: $midBlue;
+}
+
+.lineOutsideTransparent {
+  height: 4px;
+  flex-grow: 1;
+  background-color: transparent;
+}
+
 .headlinePortfolio {
   height: 110px;
   @include flexPosition(center, center, row);
-  gap: 16px;
   padding-left: 0;
   padding-right: 0;
   position: relative;
   z-index: 10;
+  width: 100%;
 }
 
 .headlinePortfolio span {
   font-size: 90px;
   font-weight: bold;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.subHeader {
+  @include flexPosition(center, center, row);
+  max-width: 1990px;
+  width: 100%;
 }
 
 .subText {

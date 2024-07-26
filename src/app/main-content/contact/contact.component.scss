@@ -18,6 +18,21 @@ section {
   background-color: $midBlue;
 }
 
+.lineOutsideLeft {
+  height: 4px;
+  flex-grow: 1;
+  background-color: $midBlue;
+  z-index: 11;
+  margin-top: 66px;
+}
+
+.lineOutsideTransparent {
+  height: 4px;
+  flex-grow: 1;
+  background-color: transparent;
+  margin-top: 66px;
+}
+
 .header {
   @include flexPosition(unset, center, row);
   gap: 16px;

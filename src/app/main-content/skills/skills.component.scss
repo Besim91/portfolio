@@ -81,10 +81,18 @@ section {
   background-color: $midBlue;
 }
 
-.lineRightTransparent {
+.lineROutsideTransparent {
   height: 4px;
-  width: 100px;
+  flex-grow: 1;
   background-color: transparent;
+}
+
+.lineOutsideRight {
+  height: 4px;
+  flex-grow: 1;
+  background-color: $midBlue;
+  z-index: 11;
+  margin-top: 158px;
 }
 
 .skillsTextHeader {

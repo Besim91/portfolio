@@ -1,7 +1,7 @@
 @import "./../../../styles.scss";
 
 :host {
-  @include flexPosition(center, unset, row);
+  @include flexPosition(center, center, row);
 }
 
 section {
@@ -9,7 +9,6 @@ section {
   max-width: 1990px;
   background-color: $darkBlue;
   @include flexPosition(center, unset, row);
-  padding-bottom: 50px;
 }
 
 app-aboutme {
@@ -34,13 +33,28 @@ app-aboutme {
 .intro {
   @include flexPosition(space-between, center, row);
   padding-left: 0;
-  gap: 40px;
 }
 
 .lineRightInside {
   height: 4px;
-  width: 100px;
+  width: 300px;
   background-color: $babyBlue;
+  position: relative;
+  z-index: 11;
+}
+
+.lineOutsideRight {
+  height: 4px;
+  flex-grow: 1;
+  background-color: $babyBlue;
+  position: relative;
+  z-index: 11;
+}
+
+.lineOutsideTransparent {
+  height: 4px;
+  flex-grow: 1;
+  background-color: transparent;
   position: relative;
   z-index: 11;
 }
@@ -55,6 +69,30 @@ app-aboutme {
     top: -100px;
     width: 100%;
     z-index: 10;
+  }
+}
+
+@media (max-width: 1700px) {
+  .lineRightInside {
+    width: 250px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .lineRightInside {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .lineRightInside {
+    width: 150px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .lineRightInside {
+    width: 100px;
   }
 }
 

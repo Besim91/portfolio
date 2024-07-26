@@ -48,7 +48,7 @@ section {
   left: 50%;
   transform: translate(-50%);
   z-index: 1;
-  width: 1000px;
+  width: 200%;
 }
 
 .textContainer {
@@ -147,6 +147,18 @@ footer {
   background-color: $midBlue;
   border-radius: 5px;
   margin-left: -3px;
+}
+
+.lineOutside {
+  height: 4px;
+  flex-grow: 1;
+  background-color: $midBlue;
+}
+
+.lineTransparent {
+  height: 4px;
+  flex-grow: 1;
+  background-color: transparent;
 }
 
 .scrollDown {

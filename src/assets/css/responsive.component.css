@@ -237,10 +237,6 @@
   .lineLeftInside {
     width: 5% !important;
   }
-
-  .backgroundForm {
-    width: 750px !important;
-  }
 }
 
 @media (max-width: 600px) {
@@ -352,10 +348,6 @@
 
   .form {
     top: 410px !important;
-  }
-
-  .backgroundForm {
-    width: 550px !important;
   }
 }
 
