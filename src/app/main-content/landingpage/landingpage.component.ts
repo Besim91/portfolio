@@ -32,10 +32,6 @@ export class LandingpageComponent implements OnInit {
     });
   }
 
-  // ngAfterViewInit(): void {
-  //   this.updatePixelWidth();
-  // }
-
   constructor() {
     setTimeout(() => {
       this.updatePixelWidth();
@@ -45,10 +41,12 @@ export class LandingpageComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
     this.updatePixelWidth();
+    console.log('Aktuell Bildschirmbreite1:' + this.currentPixel);
   }
 
   updatePixelWidth(): void {
     this.currentPixel = window.innerWidth;
+    console.log('Aktuell Bildschirmbreite2:' + this.currentPixel);
   }
 
   loadResponsiveStyles(language: string): void {
