@@ -1,7 +1,7 @@
 <div class="container">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-        <div class="input-container">
+        <div class="inputContainer">
             <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{'contact.yourName' | translate}}"
                    required [class.invalid]="!name.valid && name.touched" [class.valid]="name.valid && name.touched">
             <img *ngIf="!name.valid && name.touched" src="./../../../../assets/img/forms/fail.png" class="inputFail">
@@ -9,7 +9,7 @@
             <span *ngIf="!name.valid && name.touched" class="requirements">{{'contact.errorOne' | translate}}</span>
         </div>
 
-        <div class="input-container">
+        <div class="inputContainer">
             <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
                    placeholder="{{'contact.yourEmail' | translate}}" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required
                    [class.invalid]="!email.valid && email.touched" [class.valid]="email.valid && email.touched">
@@ -18,7 +18,7 @@
             <span *ngIf="!email.valid && email.touched" class="requirements">{{'contact.errorTwo' | translate}}</span>
         </div>
 
-        <div class="input-container">
+        <div class="inputContainer">
             <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="{{'contact.message' | translate}}"
                       style="height:200px" required [class.invalid]="!message.valid && message.touched"
                       [class.valid]="message.valid && message.touched"></textarea>
@@ -27,7 +27,7 @@
             <span *ngIf="!message.valid && message.touched" class="requirements">{{'contact.errorThree' | translate}}</span>
         </div>
 
-        <div class="privacy-policy">
+        <div class="privacyPolicy">
             <div>
                 <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" id="checkbox" name="checkbox" required>
             </div>
