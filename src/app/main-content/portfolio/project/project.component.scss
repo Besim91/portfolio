@@ -35,6 +35,10 @@ img {
   gap: 100px;
   position: relative;
   z-index: 10;
+
+  span {
+    animation: fadeInAndExpand 1s ease-in-out ;
+  }
 }
 
 .title {

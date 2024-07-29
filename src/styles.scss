@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-
 }
 
 body {
@@ -25,6 +24,44 @@ body {
   justify-content: $justify;
   align-items: $align;
   flex-direction: $direction;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0) rotate(90deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(90deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes fadeInAndExpand {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+.animateOnScroll {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fadeInAndExpand {
+  animation: fadeInAndExpand 1s forwards;
 }
 
 $darkBlue: rgb(20, 29, 47);

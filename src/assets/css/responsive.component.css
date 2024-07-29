@@ -12,61 +12,61 @@
 
 @media (max-width: 1800px) {
   .form {
-    top: 170px !important;
+    top: 145px !important;
   }
 }
 
 @media (max-width: 1750px) {
   .form {
-    top: 190px !important;
+    top: 165px !important;
   }
 }
 
 @media (max-width: 1700px) {
   .form {
-    top: 210px !important;
+    top: 185px !important;
   }
 }
 
 @media (max-width: 1650px) {
   .form {
-    top: 230px !important;
+    top: 205px !important;
   }
 }
 
 @media (max-width: 1600px) {
   .form {
-    top: 250px !important;
+    top: 225px !important;
   }
 }
 
 @media (max-width: 1550px) {
   .form {
-    top: 270px !important;
+    top: 245px !important;
   }
 }
 
 @media (max-width: 1500px) {
   .form {
-    top: 290px !important;
+    top: 265px !important;
   }
 }
 
 @media (max-width: 1450px) {
   .form {
-    top: 310px !important;
+    top: 285px !important;
   }
 }
 
 @media (max-width: 1400px) {
   .form {
-    top: 330px !important;
+    top: 305px !important;
   }
 }
 
 @media (max-width: 1350px) {
   .form {
-    top: 350px !important;
+    top: 325px !important;
   }
 }
 
@@ -98,10 +98,11 @@
 
   .parentTextContainer {
     padding-right: 0 !important;
+    margin-top: -90px !important;
   }
 
   .form {
-    top: 400px !important;
+    top: 280px !important;
   }
 }
 
@@ -115,13 +116,13 @@
   }
 
   .form {
-    top: 320px !important;
+    top: 295px !important;
   }
 }
 
 @media (max-width: 1150px) {
   .form {
-    top: 330px !important;
+    top: 305px !important;
   }
 }
 
@@ -141,13 +142,13 @@
   }
 
   .form {
-    top: 340px !important;
+    top: 315px !important;
   }
 }
 
 @media (max-width: 1050px) {
   .form {
-    top: 360px !important;
+    top: 335px !important;
   }
 }
 
@@ -166,37 +167,37 @@
   }
 
   .form {
-    top: 370px !important;
+    top: 345px !important;
   }
 }
 
 @media (max-width: 950px) {
   .form {
-    top: 380px !important;
+    top: 355px !important;
   }
 }
 
 @media (max-width: 900px) {
   .form {
-    top: 390px !important;
+    top: 365px !important;
   }
 }
 
 @media (max-width: 850px) {
   .form {
-    top: 400px !important;
+    top: 375px !important;
   }
 }
 
 @media (max-width: 800px) {
   .form {
-    top: 410px !important;
+    top: 385px !important;
   }
 }
 
 @media (max-width: 750px) {
   .form {
-    top: 420px !important;
+    top: 395px !important;
   }
 }
 
@@ -220,13 +221,13 @@
   }
 
   .form {
-    top: 430px !important;
+    top: 405px !important;
   }
 }
 
 @media (max-width: 650px) {
   .form {
-    top: 600px !important;
+    top: 575px !important;
   }
 
   .maxWidth {
@@ -267,7 +268,11 @@
   }
 
   .form {
-    top: 550px !important;
+    top: 525px !important;
+  }
+
+  .parentTextContainer {
+    margin-top: -60px !important;
   }
 }
 
@@ -321,7 +326,7 @@
   }
 
   .form {
-    top: 450px !important;
+    top: 300px !important;
   }
 
   .bm {
@@ -344,10 +349,6 @@
 
   #textBox {
     gap: 12px !important;
-  }
-
-  .form {
-    top: 410px !important;
   }
 }
 

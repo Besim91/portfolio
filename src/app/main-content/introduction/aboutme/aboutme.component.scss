@@ -8,6 +8,10 @@
   gap: 40px;
   margin-left: 100px;
   padding-right: 40px;
+
+  span {
+    animation: fadeInAndExpand 1s ease-in-out;
+  }
 }
 
 .title {

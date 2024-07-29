@@ -17,6 +17,8 @@ export class SkillsComponent {
 
   ngOnInit(): void {
     this.updatePixelWidth();
+    this.controll.observeElements();
+
   }
 
   @HostListener('window:resize', ['$event'])

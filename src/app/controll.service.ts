@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -11,6 +11,9 @@ export class ControllService {
   isBurgerMenuVisible = true;
   selectedLanguage: string = 'en';
   languageChangeSubject = new BehaviorSubject<string>(this.selectedLanguage);
+  private renderer: Renderer2;
+  isVisibleSubject = new BehaviorSubject<boolean>(false);
+  isVisible$ = this.isVisibleSubject.asObservable();
 
   images = [
     './../../../assets/img/forms/burger menu.png',
@@ -32,7 +35,19 @@ export class ControllService {
     { img: '/assets/img/icons/material.png', title: 'Material Design' },
   ];
 
-  constructor(private translate: TranslateService) {}
+  constructor(
+    private translate: TranslateService,
+    rendererFactory: RendererFactory2
+  ) {
+    this.renderer = rendererFactory.createRenderer(null, null);
+    this.initializeAnimation();
+  }
+
+  initializeAnimation() {
+    setTimeout(() => {
+      this.isVisibleSubject.next(true);
+    }, 0);
+  }
 
   toggleSidebar() {
     this.sidebarOpenSubject.next(!this.sidebarOpenSubject.value);
@@ -71,12 +86,50 @@ export class ControllService {
     if (language && language !== this.selectedLanguage) {
       this.translate.use(language);
       this.selectedLanguage = language;
-      this.languageChangeSubject.next(language); // Notify language change
-      console.log(this.selectedLanguage); // Check
+      this.languageChangeSubject.next(language);
     }
   }
 
   linkToTop() {
     window.scroll(0, 0);
+  }
+
+  setupIntersectionObserver(container: HTMLElement): void {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          this.renderer.addClass(entry.target, 'animate');
+        } else {
+          this.renderer.removeClass(entry.target, 'animate');
+        }
+      });
+    });
+
+    const elements = container.querySelectorAll('.animate-on-scroll');
+    elements.forEach((el: Element) => observer.observe(el));
+  }
+
+  observeElements(): void {
+    const options = {
+      root: null,
+      threshold: 0.1,
+    };
+
+    const callback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          this.renderer.addClass(entry.target, 'animate');
+        } else {
+          this.renderer.removeClass(entry.target, 'animate');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    const elements = document.querySelectorAll('.animateOnScroll');
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
   }
 }

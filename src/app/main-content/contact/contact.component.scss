@@ -45,6 +45,7 @@ section {
     font-size: 90px;
     font-weight: bold;
     color: white;
+    animation: fadeInAndExpand 1s ease-in-out;
   }
 }
 
@@ -58,6 +59,10 @@ section {
   div {
     @include flexPosition(unset, unset, column);
     gap: 16px;
+  }
+
+  span {
+    animation: fadeInAndExpand 1s ease-in-out;
   }
 }
 

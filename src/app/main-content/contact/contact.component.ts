@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormularComponent } from './formular/formular.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { ControllService } from './../../controll.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,4 +10,10 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
-export class ContactComponent {}
+export class ContactComponent {
+  controll = inject(ControllService);
+
+  ngOnInit() {
+    this.controll.observeElements();
+  }
+}

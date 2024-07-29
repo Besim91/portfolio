@@ -27,7 +27,7 @@
             <span *ngIf="!message.valid && message.touched" class="requirements">{{'contact.errorThree' | translate}}</span>
         </div>
 
-        <div class="privacyPolicy">
+        <div class="privacyPolicy animateOnScroll">
             <div>
                 <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" id="checkbox" name="checkbox" required>
             </div>

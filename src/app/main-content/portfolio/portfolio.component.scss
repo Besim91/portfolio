@@ -12,6 +12,10 @@ section {
   }
 }
 
+#portfolio span {
+  animation: fadeInAndExpand 1s ease-in-out;
+}
+
 .lineLeft {
   height: 4px;
   width: 10%;
