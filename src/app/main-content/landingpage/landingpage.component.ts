@@ -5,6 +5,7 @@ import {
   inject,
   ElementRef,
   ViewChild,
+  HostListener,
 } from '@angular/core';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
@@ -28,20 +29,21 @@ export class LandingpageComponent implements OnInit {
   photoLandingpage!: ElementRef;
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.updatePixelWidth();
-      this.controllService.observeElements();
-    }, 200);
+    this.updatePixelWidth();
+    this.controllService.observeElements();
     this.loadResponsiveStyles(this.controllService.selectedLanguage);
     this.controllService.languageChangeSubject.subscribe((language) => {
       this.loadResponsiveStyles(language);
     });
+    window.addEventListener('resize', this.updatePixelWidth.bind(this));
   }
 
   constructor() {}
 
+  @HostListener('window:resize', [])
   updatePixelWidth(): void {
     this.currentPixel = window.innerWidth;
+    console.log('Current Pixel Width:', this.currentPixel);
   }
 
   loadResponsiveStyles(language: string): void {
