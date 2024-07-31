@@ -10,13 +10,13 @@
         <img *ngIf="controll.isBurgerMenuVisible" (click)="toggleSidebar()" id="burgerMenu" class="burgerMenu"
              src="./../../../assets/img/forms/burger menu.png" alt="burgerMenu">
         <nav class="links">
-            <a href="#aboutMe">
+            <a (click)="controll.scrollToElement('aboutMe', 100)">
                 {{ 'header.aboutMe' | translate }}
             </a>
-            <a href="#skills">
+            <a (click)="controll.scrollToElement('skills', 0)">
                 {{ 'header.skills' | translate }}
             </a>
-            <a href="#portfolio">
+            <a (click)="controll.scrollToElement('portfolio', 100)">
                 {{ 'header.portfolio' | translate }}
             </a>
             <div class="languageSwitcher">

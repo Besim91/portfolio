@@ -11,9 +11,11 @@
                 <span class="infoSkills animateOnScroll">{{ 'skills.text' | translate }}</span>
                 <div class="lineRightTransparent"></div>
             </div>
-            <a href="#contact" class="styledLink" *ngIf="currentPixel >= 860">{{ 'skills.getInTouch' | translate }}</a>
+            <a (click)="controll.scrollToElement('contact', 100)" class="styledLink" *ngIf="currentPixel >= 860">{{ 'skills.getInTouch' |
+                translate }}</a>
         </div>
-        <a href="#contact" class="styledLink" *ngIf="currentPixel < 860">{{ 'skills.getInTouch' | translate }}</a>
+        <a (click)="controll.scrollToElement('contact', 100)" class="styledLink" *ngIf="currentPixel < 860">{{ 'skills.getInTouch' | translate
+            }}</a>
     </div>
 </section>
 <div class="lineOutsideRight"></div>

@@ -23,4 +23,9 @@ export class SlideComponent implements OnInit {
   switchLanguage(language: string) {
     this.controll.switchLanguage(language);
   }
+
+  toggleAndScrollFunction(elementId: string, offset: number) {
+    this.controll.toggleSidebar();
+    this.controll.scrollToElement(elementId, offset);
+  }
 }

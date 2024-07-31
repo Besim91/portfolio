@@ -10,7 +10,6 @@ import {
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { ControllService } from './../../controll.service';
-import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-landingpage',
@@ -20,9 +19,9 @@ import { ChangeDetectorRef } from '@angular/core';
   imports: [CommonModule, TranslateModule],
 })
 export class LandingpageComponent implements OnInit {
-  private document = inject(DOCUMENT);
-  private renderer = inject(Renderer2);
-  private controllService = inject(ControllService);
+  document = inject(DOCUMENT);
+  renderer = inject(Renderer2);
+  controllService = inject(ControllService);
 
   @ViewChild('textBox', { static: true }) textBox!: ElementRef;
   @ViewChild('photoLandingpage', { static: true })

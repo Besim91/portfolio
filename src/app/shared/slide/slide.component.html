@@ -12,13 +12,13 @@
         </div>
     </header>
     <nav class="links">
-        <a href="#introduction" (click)="this.controll.toggleSidebar()">
+        <a (click)="toggleAndScrollFunction('aboutMe', 100)">
             {{ 'header.aboutMe' | translate }}
         </a>
-        <a href="#skills" (click)="this.controll.toggleSidebar()">
+        <a (click)="toggleAndScrollFunction('skills', 0)">
             {{ 'header.skills' | translate }}
         </a>
-        <a href="#portfolio" (click)="this.controll.toggleSidebar()">
+        <a (click)="toggleAndScrollFunction('portfolio', 100)">
             {{ 'header.portfolio' | translate }}
         </a>
         <div class="languageSwitcher">

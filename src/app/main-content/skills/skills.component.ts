@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IconsComponent } from './icons/icons.component';
 import { TranslateModule } from '@ngx-translate/core';
 
+
 @Component({
   selector: 'app-skills',
   standalone: true,

@@ -132,4 +132,19 @@ export class ControllService {
       observer.observe(element);
     });
   }
+  scrollToElement(elementId: string, offset: number) {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const rect = element.getBoundingClientRect();
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const elementPosition = rect.top + scrollTop;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  }
 }
