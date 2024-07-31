@@ -43,7 +43,6 @@ export class LandingpageComponent implements OnInit {
   @HostListener('window:resize', [])
   updatePixelWidth(): void {
     this.currentPixel = window.innerWidth;
-    console.log('Current Pixel Width:', this.currentPixel);
   }
 
   loadResponsiveStyles(language: string): void {
