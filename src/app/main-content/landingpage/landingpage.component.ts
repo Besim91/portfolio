@@ -10,6 +10,7 @@ import {
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { ControllService } from './../../controll.service';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-landingpage',
@@ -19,7 +20,6 @@ import { ControllService } from './../../controll.service';
   imports: [CommonModule, TranslateModule],
 })
 export class LandingpageComponent implements OnInit {
-  currentPixel!: number;
   private document = inject(DOCUMENT);
   private renderer = inject(Renderer2);
   private controllService = inject(ControllService);
@@ -29,20 +29,11 @@ export class LandingpageComponent implements OnInit {
   photoLandingpage!: ElementRef;
 
   ngOnInit(): void {
-    this.updatePixelWidth();
     this.controllService.observeElements();
     this.loadResponsiveStyles(this.controllService.selectedLanguage);
     this.controllService.languageChangeSubject.subscribe((language) => {
       this.loadResponsiveStyles(language);
     });
-    window.addEventListener('resize', this.updatePixelWidth.bind(this));
-  }
-
-  constructor() {}
-
-  @HostListener('window:resize', [])
-  updatePixelWidth(): void {
-    this.currentPixel = window.innerWidth;
   }
 
   loadResponsiveStyles(language: string): void {

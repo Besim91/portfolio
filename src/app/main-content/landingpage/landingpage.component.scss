@@ -179,3 +179,32 @@ footer {
     transform: rotate(-90deg);
   }
 }
+
+#desktopImage {
+  display: block;
+}
+
+#mobileImage {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  #desktopImage {
+    display: none;
+  }
+  #mobileImage {
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .scrollDown {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  #emailLink {
+    display: none;
+  }
+}

@@ -1,6 +1,6 @@
 <section>
-    <img *ngIf="currentPixel >= 650" class="form" src="/assets/img/forms/curved-background-desktop.png">
-    <img *ngIf="currentPixel < 650" class="form" src="/assets/img/forms/curved-background.png">
+    <img id="desktopImage" class="form" src="/assets/img/forms/curved-background-desktop.png">
+    <img id="mobileImage" class="form" src="/assets/img/forms/curved-background.png">
     <div id="container" class="maxWidth">
         <div class="photoParentDiv">
             <img class="photoLandingpage" src="/assets/img/besim.png">
@@ -17,8 +17,7 @@
             </div>
             <a href="#contact" class="styledLink">{{ 'landingPage.letsTalk' | translate }}</a>
         </div>
-        <span *ngIf="currentPixel >= 900" class="scrollDown">{{'landingPage.scrollDown' | translate}} <img
-                 src="/assets/img/forms/arrow-down-line.png"></span>
+        <span class="scrollDown">{{'landingPage.scrollDown' | translate}} <img src="/assets/img/forms/arrow-down-line.png"></span>
     </div>
 
     <footer>
@@ -29,13 +28,10 @@
                 <div class="lineLeftInside"></div>
                 <a href="https://github.com/" target="_blank"><img src="/assets/img/icons/git.png"></a>
                 <a href="mailto:besimnaim@gmail.com"><img src="/assets/img/icons/mail.png"></a>
-                <a href="https://www.linkedin.com/in/besim-mustafi-7486542a4/
-                " target="_blank"><img src="/assets/img/icons/in.png"></a>
-                <a *ngIf="currentPixel >= 650">besimnaim&#64;gmail.com</a>
+                <a href="https://www.linkedin.com/in/besim-mustafi-7486542a4/" target="_blank"><img src="/assets/img/icons/in.png"></a>
+                <a id="emailLink">besimnaim&#64;gmail.com</a>
             </nav>
         </div>
         <div class="lineTransparent"></div>
-
     </footer>
-
 </section>
